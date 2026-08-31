@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osd.dev/schemas/country.schema.json",
+  "title": "Country",
+  "type": "object",
+  "required": ["iso2", "iso3", "country_name", "region"],
+  "properties": {
+    "iso2": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "iso3": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "un_m49": { "type": "integer" },
+    "country_name": { "type": "string" },
+    "region": { "type": "string" },
+    "income_group": {
+      "type": "string",
+      "enum": ["high", "upper_middle", "lower_middle", "low", "unknown"]
+    },
+    "population": { "type": ["integer", "null"], "minimum": 0 },
+    "government_type": { "type": ["string", "null"] },
+    "constitution_url": { "type": ["string", "null"], "format": "uri" },
+    "sovereign_status": {
+      "type": "string",
+      "enum": ["un_member", "observer", "partially_recognised", "territory"]
+    },
+    "pilot": { "type": "boolean", "default": false }
+  },
+  "additionalProperties": false
+}

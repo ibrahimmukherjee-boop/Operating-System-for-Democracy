@@ -1,0 +1,5 @@
+{
+  "description": "Registry of 195 sovereign states for generalised ingestion (193 UN members + Palestine + Holy See)",
+  "note": "Pilot countries are fully wired; remaining countries loaded with metadata only",
+  "countries": []
+}

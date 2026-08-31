@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osd.dev/schemas/policy.schema.json",
+  "title": "Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "country",
+    "title",
+    "status",
+    "review_status",
+    "stated_objectives",
+    "sources"
+  ],
+  "properties": {
+    "policy_id": { "type": "string" },
+    "country": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "title": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "completed", "suspended", "terminated"]
+    },
+    "start_date": { "type": ["string", "null"], "format": "date" },
+    "end_date": { "type": ["string", "null"], "format": "date" },
+    "government_department": { "type": ["string", "null"] },
+    "policy_area": { "type": ["string", "null"] },
+    "legal_basis": { "type": "array", "items": { "type": "string" } },
+    "constitutional_constraints": { "type": "array", "items": { "type": "string" } },
+    "maqasid_domains": { "type": "array", "items": { "type": "string" } },
+    "halakha_parallels": { "type": "array", "items": { "type": "string" } },
+    "public_value_domains": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^D[1-9]|D10$" }
+    },
+    "stated_objectives": { "type": "array", "items": { "type": "string" } },
+    "target_population": { "type": "array", "items": { "type": "string" } },
+    "indicators": { "type": "array", "items": { "type": "string" } },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "amount": { "type": ["number", "null"] },
+        "currency": { "type": ["string", "null"] },
+        "period_years": { "type": ["number", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "baseline": { "type": "object" },
+    "targets": { "type": "object" },
+    "observed_outcomes": { "type": "object" },
+    "actual_outcomes": { "type": "object" },
+    "confidence": { "type": "object" },
+    "uncertainty": { "type": "object" },
+    "sources": { "type": "array", "items": { "type": "string" } },
+    "review_status": {
+      "type": "string",
+      "enum": ["unverified", "pending_review", "verified", "rejected"]
+    },
+    "ai_generated": { "type": "boolean", "default": false }
+  },
+  "additionalProperties": true
+}

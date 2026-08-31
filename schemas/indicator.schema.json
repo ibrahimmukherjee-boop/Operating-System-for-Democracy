@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osd.dev/schemas/indicator.schema.json",
+  "title": "Indicator",
+  "type": "object",
+  "required": ["indicator_id", "name", "domain_id", "direction"],
+  "properties": {
+    "indicator_id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": ["string", "null"] },
+    "domain_id": { "type": "string", "pattern": "^D[1-9]|D10$" },
+    "direction": {
+      "type": "string",
+      "enum": ["higher_better", "lower_better"]
+    },
+    "unit": { "type": ["string", "null"] },
+    "normalisation_method": {
+      "type": "string",
+      "enum": ["min_max", "z_score", "percentile", "binary", "custom"]
+    },
+    "source_reliability_default": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "red_line_eligible": { "type": "boolean", "default": false }
+  },
+  "additionalProperties": false
+}

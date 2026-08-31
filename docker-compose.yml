@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: osd
+      POSTGRES_PASSWORD: osd
+      POSTGRES_DB: osd
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U osd"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8742:8742"
+    environment:
+      DATABASE_URL: postgresql://osd:osd@postgres:5432/osd
+      OSD_MODEL_VERSION: "0.1.0"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: >
+      sh -c "python -m osd.cli seed &&
+             uvicorn api.main:app --host 0.0.0.0 --port 8742"
+
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    ports:
+      - "4317:4317"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8742
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:

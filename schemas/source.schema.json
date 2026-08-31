@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osd.dev/schemas/source.schema.json",
+  "title": "Source / Provenance",
+  "type": "object",
+  "required": ["source_id", "name", "retrieved_at"],
+  "properties": {
+    "source_id": { "type": "string" },
+    "name": { "type": "string" },
+    "url": { "type": ["string", "null"], "format": "uri" },
+    "dataset": { "type": ["string", "null"] },
+    "publication_date": { "type": ["string", "null"], "format": "date" },
+    "observation_date": { "type": ["string", "null"], "format": "date" },
+    "method": { "type": ["string", "null"] },
+    "licence": { "type": ["string", "null"] },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "transformation": { "type": ["string", "null"] },
+    "normalisation_method": { "type": ["string", "null"] },
+    "weight": { "type": ["number", "null"] },
+    "model_version": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}
