@@ -2,10 +2,12 @@
   "model_version": "0.1.0",
   "framework": "maqasid",
   "tagline": "Policy in. Evidence out. Power audited.",
-  "generated_at": "2026-08-31T21:10:49.161697+00:00",
+  "generated_at": "2026-08-31T21:34:59.737907+00:00",
   "total_countries": 195,
   "scored_countries": 5,
   "unavailable_countries": 190,
+  "total_policies": 5,
+  "total_government_funds_usd": 18258000000.0,
   "pilot_countries": [
     "GBR",
     "USA",

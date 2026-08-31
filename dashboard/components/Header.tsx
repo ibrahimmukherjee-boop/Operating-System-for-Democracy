@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Overview" },
-  { href: "/rankings/", label: "Rankings" },
+  { href: "/dashboard/", label: "Live dashboard" },
+  { href: "/rankings/", label: "Countries" },
   { href: "/os/", label: "Policy OS" },
   { href: "/weighting/", label: "Weights" },
   { href: "/framework/", label: "Framework" },

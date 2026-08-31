@@ -1,0 +1,6 @@
+rank,policy_id,country,title,effectiveness_score,budget_usd,review_status
+1,IND-HEALTH-2025-008,IND,Rural Primary Care Expansion Mission,64.88,5400000000.0,unverified
+2,GBR-HOUSING-2026-001,GBR,National Homelessness Reduction Programme,61.25,5080000000.0,unverified
+3,USA-EDU-2025-014,USA,Early Literacy Acceleration Grant,61.25,2800000000.0,unverified
+4,DNK-ENV-2024-003,DNK,District Heating Decarbonisation Programme,61.25,2610000000.0,unverified
+5,SGP-HOUSING-2023-002,SGP,HDB Aging-in-Place Retrofit Programme,61.25,2368000000.0,unverified

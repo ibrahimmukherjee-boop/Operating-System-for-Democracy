@@ -1,0 +1,100 @@
+{
+  "rankings": [
+    {
+      "policy_rank": 1,
+      "policy_id": "IND-HEALTH-2025-008",
+      "title": "Rural Primary Care Expansion Mission",
+      "country_iso3": "IND",
+      "country_name": "India",
+      "effectiveness_score": 64.88,
+      "budget_usd": 5400000000.0,
+      "currency": "INR",
+      "amount_native": 450000000000,
+      "review_status": "unverified",
+      "maqasid_domains": [
+        "hifz_al_nafs",
+        "hifz_al_nasl",
+        "adl",
+        "karamah"
+      ],
+      "walkthrough": false
+    },
+    {
+      "policy_rank": 2,
+      "policy_id": "GBR-HOUSING-2026-001",
+      "title": "National Homelessness Reduction Programme",
+      "country_iso3": "GBR",
+      "country_name": "United Kingdom",
+      "effectiveness_score": 61.25,
+      "budget_usd": 5080000000.0,
+      "currency": "GBP",
+      "amount_native": 4000000000,
+      "review_status": "unverified",
+      "maqasid_domains": [
+        "hifz_al_nafs",
+        "hifz_al_mal",
+        "karamah",
+        "hifz_al_nasl",
+        "adl",
+        "hifz_al_aql"
+      ],
+      "walkthrough": true
+    },
+    {
+      "policy_rank": 3,
+      "policy_id": "USA-EDU-2025-014",
+      "title": "Early Literacy Acceleration Grant",
+      "country_iso3": "USA",
+      "country_name": "United States",
+      "effectiveness_score": 61.25,
+      "budget_usd": 2800000000.0,
+      "currency": "USD",
+      "amount_native": 2800000000,
+      "review_status": "unverified",
+      "maqasid_domains": [
+        "hifz_al_aql",
+        "hifz_al_nasl",
+        "adl"
+      ],
+      "walkthrough": false
+    },
+    {
+      "policy_rank": 4,
+      "policy_id": "DNK-ENV-2024-003",
+      "title": "District Heating Decarbonisation Programme",
+      "country_iso3": "DNK",
+      "country_name": "Denmark",
+      "effectiveness_score": 61.25,
+      "budget_usd": 2610000000.0,
+      "currency": "DKK",
+      "amount_native": 18000000000,
+      "review_status": "unverified",
+      "maqasid_domains": [
+        "la_darar",
+        "hifz_al_mal",
+        "amanah"
+      ],
+      "walkthrough": false
+    },
+    {
+      "policy_rank": 5,
+      "policy_id": "SGP-HOUSING-2023-002",
+      "title": "HDB Aging-in-Place Retrofit Programme",
+      "country_iso3": "SGP",
+      "country_name": "Singapore",
+      "effectiveness_score": 61.25,
+      "budget_usd": 2368000000.0,
+      "currency": "SGD",
+      "amount_native": 3200000000,
+      "review_status": "unverified",
+      "maqasid_domains": [
+        "karamah",
+        "hifz_al_nafs",
+        "hifz_al_nasl",
+        "hifz_al_mal"
+      ],
+      "walkthrough": false
+    }
+  ],
+  "model_version": "0.1.0"
+}

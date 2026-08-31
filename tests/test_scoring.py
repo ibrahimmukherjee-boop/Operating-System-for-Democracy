@@ -90,9 +90,25 @@ class TestCountryScore:
 
 
 class TestPolicyScoring:
-    def test_unverified_policy_no_scores(self):
+    def test_empty_unverified_has_high_uncertainty_only(self):
         components = compute_policy_components({"review_status": "unverified"})
-        assert all(v is None for v in components.values())
+        assert components["observed_impact"] is None
+        assert components["uncertainty"] == 25.0
+
+    def test_declared_policy_gets_declaration_score(self):
+        components = compute_policy_components(
+            {
+                "review_status": "unverified",
+                "maqasid_domains": ["hifz_al_nafs"],
+                "budget": {"amount": 1e9, "maqasid_allocation": {"hifz_al_nafs": 1.0}},
+                "targets": {"x": {"value": 0.5}},
+                "stated_objectives": ["Reduce harm"],
+                "sources": ["s1"],
+            }
+        )
+        assert components["maqasid_compatibility"] == 75.0
+        assert components["need"] is not None
+        assert components["observed_impact"] is None
 
     def test_effectiveness_none_when_empty(self):
         assert compute_policy_effectiveness({}) is None

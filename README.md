@@ -12,7 +12,11 @@ Local customs (**ʿurf**), including **Halacha**, can be tuned per country **onl
 
 **Pages:** https://ibrahimmukherjee-boop.github.io/Operating-System-for-Democracy/
 
-After push to `main`, `.github/workflows/pages.yml` builds the static site and deploys. Enable Pages → Source: GitHub Actions if prompted.
+The public site is a lucid operating-system dashboard:
+- **195 sovereign states** in the rankings table (pilots scored; others marked unavailable — never fabricated)
+- Data-drawn charts (score bars, domain matrix, expenditure allocation) — no stock imagery
+- Policy OS pipeline for expenditure → Maqasid → outcomes
+
 
 ## Framework hierarchy
 

@@ -80,6 +80,11 @@ export interface Policy {
   sources: { source_id: string; name: string; url: string | null }[] | string[];
   provenance: Record<string, unknown> | null;
   framework?: string;
+  walkthrough?: boolean;
+  legal_basis?: string[];
+  constitutional_constraints?: string[];
+  budget_usd?: number | null;
+  policy_rank?: number;
 }
 
 function dataUrl(path: string): string {
@@ -121,4 +126,5 @@ export const api = {
   },
   meta: () => loadJson<Record<string, unknown>>("meta.json"),
   countryScores: () => loadJson<Record<string, CountryScore>>("country_scores.json"),
+  dashboard: () => loadJson<Record<string, unknown>>("dashboard.json"),
 };

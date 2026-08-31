@@ -229,12 +229,14 @@ def export_static(out_dir: Path | None = None) -> Path:
 
     policy_out = []
     for p in policies:
-        urf = []
-        for item in p.get("urf") or []:
-            urf.append(item)
+        urf = list(p.get("urf") or [])
         for code in p.get("halakha_parallels") or []:
             urf.append({"tradition": "halakha", "principle": code, "layer": "urf"})
         components = compute_policy_components(p)
+        budget = p.get("budget") or {}
+        amount = budget.get("amount")
+        fx = budget.get("fx_to_usd") or 1.0
+        usd = float(amount) * float(fx) if amount is not None else None
         policy_out.append(
             {
                 **{k: v for k, v in p.items() if k not in ("halakha_parallels",)},
@@ -242,6 +244,7 @@ def export_static(out_dir: Path | None = None) -> Path:
                 "framework": "maqasid",
                 "score_components": components,
                 "effectiveness_score": compute_policy_effectiveness(components),
+                "budget_usd": usd,
                 "country_name": next(
                     (c["country_name"] for c in countries if c["iso3"] == p["country"]),
                     p["country"],
@@ -249,6 +252,81 @@ def export_static(out_dir: Path | None = None) -> Path:
                 "country_iso3": p["country"],
             }
         )
+
+    policy_rankings = sorted(
+        policy_out,
+        key=lambda p: (
+            -(p["effectiveness_score"] if p["effectiveness_score"] is not None else -1),
+            -(p["budget_usd"] or 0),
+        ),
+    )
+    for i, p in enumerate(policy_rankings):
+        p["policy_rank"] = i + 1
+
+    # Government funds dashboard aggregates (USD-normalised illustrative totals)
+    funds_by_country: dict[str, float] = {}
+    funds_by_maqasid: dict[str, float] = {}
+    funds_by_area: dict[str, float] = {}
+    for p in policy_out:
+        usd = p.get("budget_usd")
+        if usd is None:
+            continue
+        funds_by_country[p["country_iso3"]] = funds_by_country.get(p["country_iso3"], 0) + usd
+        area = p.get("policy_area") or "unspecified"
+        funds_by_area[area] = funds_by_area.get(area, 0) + usd
+        alloc = (p.get("budget") or {}).get("maqasid_allocation") or {}
+        if alloc:
+            for m, share in alloc.items():
+                funds_by_maqasid[m] = funds_by_maqasid.get(m, 0) + usd * float(share)
+        else:
+            for m in p.get("maqasid_domains") or ["unallocated"]:
+                n = max(len(p.get("maqasid_domains") or [1]), 1)
+                funds_by_maqasid[m] = funds_by_maqasid.get(m, 0) + usd / n
+
+    total_funds_usd = sum(funds_by_country.values())
+    dashboard = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total_policies": len(policy_out),
+        "total_government_funds_usd": round(total_funds_usd, 2),
+        "currencies_note": "Converted with illustrative fx_to_usd on each policy budget; not live FX.",
+        "funds_by_country": [
+            {
+                "country_iso3": iso,
+                "country_name": next(c["country_name"] for c in countries if c["iso3"] == iso),
+                "total_usd": round(v, 2),
+            }
+            for iso, v in sorted(funds_by_country.items(), key=lambda x: -x[1])
+        ],
+        "funds_by_maqasid": [
+            {"maqasid": m, "total_usd": round(v, 2), "share": round(v / total_funds_usd, 4) if total_funds_usd else 0}
+            for m, v in sorted(funds_by_maqasid.items(), key=lambda x: -x[1])
+        ],
+        "funds_by_area": [
+            {"area": a, "total_usd": round(v, 2)}
+            for a, v in sorted(funds_by_area.items(), key=lambda x: -x[1])
+        ],
+        "policy_rankings": [
+            {
+                "policy_rank": p["policy_rank"],
+                "policy_id": p["policy_id"],
+                "title": p["title"],
+                "country_iso3": p["country_iso3"],
+                "country_name": p["country_name"],
+                "effectiveness_score": p["effectiveness_score"],
+                "budget_usd": p.get("budget_usd"),
+                "currency": (p.get("budget") or {}).get("currency"),
+                "amount_native": (p.get("budget") or {}).get("amount"),
+                "review_status": p.get("review_status"),
+                "maqasid_domains": p.get("maqasid_domains"),
+                "walkthrough": p.get("walkthrough", False),
+            }
+            for p in policy_rankings
+        ],
+        "walkthrough_policy_id": next(
+            (p["policy_id"] for p in policy_out if p.get("walkthrough")),
+            policy_out[0]["policy_id"] if policy_out else None,
+        ),
+    }
 
     scored_n = sum(1 for r in rankings if r["status"] == "scored")
     meta = {
@@ -259,6 +337,8 @@ def export_static(out_dir: Path | None = None) -> Path:
         "total_countries": len(countries),
         "scored_countries": scored_n,
         "unavailable_countries": len(countries) - scored_n,
+        "total_policies": len(policy_out),
+        "total_government_funds_usd": round(total_funds_usd, 2),
         "pilot_countries": PILOT_COUNTRIES,
         "domains": DOMAINS,
         "maqasid_principles": MAQASID_PRINCIPLES,
@@ -290,6 +370,10 @@ def export_static(out_dir: Path | None = None) -> Path:
     (target / "countries.json").write_text(json.dumps(countries, indent=2))
     (target / "country_scores.json").write_text(json.dumps(country_scores, indent=2))
     (target / "policies.json").write_text(json.dumps(policy_out, indent=2))
+    (target / "dashboard.json").write_text(json.dumps(dashboard, indent=2))
+    (target / "policy_rankings.json").write_text(
+        json.dumps({"rankings": dashboard["policy_rankings"], "model_version": MODEL_VERSION}, indent=2)
+    )
 
     results = ROOT / "results"
     results.mkdir(exist_ok=True)
@@ -300,6 +384,15 @@ def export_static(out_dir: Path | None = None) -> Path:
             f"{r['overall_score'] if r['overall_score'] is not None else ''},{r['status']},{MODEL_VERSION},maqasid"
         )
     (results / "global_rankings.csv").write_text("\n".join(lines) + "\n")
+
+    plines = ["rank,policy_id,country,title,effectiveness_score,budget_usd,review_status"]
+    for p in policy_rankings:
+        plines.append(
+            f"{p['policy_rank']},{p['policy_id']},{p['country_iso3']},{p['title'].replace(',', ';')},"
+            f"{p['effectiveness_score']},{p.get('budget_usd')},{p.get('review_status')}"
+        )
+    (results / "policy_rankings.csv").write_text("\n".join(plines) + "\n")
+
     (results / "methodology.json").write_text(
         json.dumps(
             {
@@ -309,6 +402,7 @@ def export_static(out_dir: Path | None = None) -> Path:
                 "model_version": MODEL_VERSION,
                 "countries": len(countries),
                 "scored": scored_n,
+                "policies": len(policy_out),
             },
             indent=2,
         )

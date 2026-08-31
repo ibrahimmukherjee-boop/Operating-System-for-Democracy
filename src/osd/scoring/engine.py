@@ -189,21 +189,55 @@ def compute_policy_components(
 
     review = policy_data.get("review_status", "unverified")
     maqasid = policy_data.get("maqasid_domains") or []
-
-    # Expenditure without Maqasid mapping is incomplete — no silent pass.
     budget = policy_data.get("budget") or {}
+    targets = policy_data.get("targets") or {}
+    outcomes = policy_data.get("observed_outcomes") or policy_data.get("actual_outcomes") or {}
+    sources = policy_data.get("sources") or []
+
+    # Declaration completeness can be scored even while review_status is unverified.
+    # Observed impact remains null until verified outcomes exist.
+    decl = 0.0
+    decl_parts = 0
+    if maqasid:
+        decl += 100.0
+        decl_parts += 1
+    if budget.get("amount") and (budget.get("maqasid_allocation") or maqasid):
+        decl += 100.0
+        decl_parts += 1
+    elif budget.get("amount"):
+        decl += 40.0
+        decl_parts += 1
+        components["maqasid_compatibility"] = 0.0
+    if targets:
+        decl += 100.0
+        decl_parts += 1
+    if sources:
+        decl += 70.0 if len(sources) >= 2 else 50.0
+        decl_parts += 1
+    if policy_data.get("stated_objectives"):
+        decl += 100.0
+        decl_parts += 1
+
+    if decl_parts:
+        components["need"] = round(decl / decl_parts, 2)
+        components["implementation_quality"] = round(min(100.0, 40.0 + decl_parts * 10), 2)
+        components["long_term_sustainability"] = 55.0 if budget.get("period_years") else None
+
     if budget.get("amount") and not maqasid:
         components["maqasid_compatibility"] = 0.0
     elif maqasid:
-        components["maqasid_compatibility"] = 100.0 if review == "verified" else None
+        components["maqasid_compatibility"] = 100.0 if review == "verified" else 75.0
 
-    if review != "verified":
-        return components
+    if sources:
+        components["evidence_quality"] = 70.0 if len(sources) >= 2 else 45.0
 
-    targets = policy_data.get("targets") or {}
-    outcomes = policy_data.get("observed_outcomes") or policy_data.get("actual_outcomes") or {}
+    # Uncertainty high when unverified / no outcomes
+    if review != "verified" or not outcomes:
+        components["uncertainty"] = 25.0
+    else:
+        components["uncertainty"] = 70.0
 
-    if targets and outcomes:
+    if review == "verified" and targets and outcomes:
         achieved = []
         for key, target in targets.items():
             if key.startswith("_"):
@@ -229,12 +263,17 @@ def compute_policy_components(
         if achieved:
             components["observed_impact"] = round(sum(achieved) / len(achieved), 2)
 
-    sources = policy_data.get("sources") or []
-    if sources:
-        components["evidence_quality"] = 70.0 if len(sources) >= 2 else 50.0
-
     if budget.get("amount") and components["observed_impact"] is not None:
         components["cost_effectiveness"] = components["observed_impact"]
+    elif budget.get("amount") and components["maqasid_compatibility"]:
+        # Declared cost mapping only — not observed value-for-money
+        components["cost_effectiveness"] = None
+        components["expected_impact"] = 50.0 if targets else None
+
+    if targets and not outcomes:
+        components["expected_impact"] = components.get("expected_impact") or 55.0
+
+    components["distributional_fairness"] = 60.0 if policy_data.get("target_population") else None
 
     return components
 

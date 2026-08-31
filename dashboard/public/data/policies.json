@@ -2,7 +2,7 @@
   {
     "policy_id": "GBR-HOUSING-2026-001",
     "country": "GBR",
-    "title": "National Homelessness Reduction Programme (Illustrative)",
+    "title": "National Homelessness Reduction Programme",
     "status": "active",
     "start_date": "2026-04-01",
     "end_date": "2031-03-31",
@@ -49,13 +49,7 @@
       "D7"
     ],
     "stated_objectives": [
-      "Reduce involuntary homelessness while preserving safety, dignity, fiscal sustainability and local community stability",
-      "Life (hifz al-nafs): reduce deaths, rough sleeping and exposure-related illness",
-      "Property (hifz al-mal): increase access to stable housing without arbitrarily infringing property rights",
-      "Intellect (hifz al-aql): improve access to addiction and mental-health services",
-      "Family (hifz al-nasl): reduce children living in temporary accommodation",
-      "Dignity (karamah): minimise degrading or unsafe living conditions",
-      "Justice (adl): ensure eligibility is applied consistently"
+      "Reduce involuntary homelessness while preserving safety, dignity, fiscal sustainability and local community stability"
     ],
     "target_population": [
       "Rough sleepers",
@@ -66,7 +60,8 @@
       "amount": 4000000000,
       "currency": "GBP",
       "period_years": 5,
-      "notes": "Every pound must map to declared Maqasid objectives",
+      "fx_to_usd": 1.27,
+      "notes": "Illustrative programme budget for walkthrough",
       "maqasid_allocation": {
         "hifz_al_nafs": 0.35,
         "hifz_al_nasl": 0.2,
@@ -79,37 +74,32 @@
     "baseline": {
       "rough_sleeping_count": {
         "value": null,
-        "unavailable_reason": "Baseline pending official statistical release"
+        "unavailable_reason": "Baseline pending official release"
       },
       "families_temp_accommodation": {
         "value": null,
-        "unavailable_reason": "Baseline pending official statistical release"
+        "unavailable_reason": "Baseline pending official release"
       }
     },
     "targets": {
       "rough_sleeping_reduction": {
         "value": 0.6,
         "direction": "decrease",
-        "unit": "proportion",
-        "deadline": "2031-03-31",
         "maqasid": "hifz_al_nafs"
       },
       "families_temp_accommodation_reduction": {
         "value": 0.4,
         "direction": "decrease",
-        "unit": "proportion",
         "maqasid": "hifz_al_nasl"
       },
       "repeat_homelessness_24m": {
         "value": 0.15,
         "direction": "below",
-        "unit": "proportion",
         "maqasid": "hifz_al_mal"
       },
       "preventable_deaths_reduction": {
         "value": 0.5,
         "direction": "decrease",
-        "unit": "proportion",
         "maqasid": "hifz_al_nafs"
       }
     },
@@ -119,21 +109,383 @@
     "sources": [
       "gov_uk_housing"
     ],
+    "walkthrough": true,
     "framework": "maqasid",
     "score_components": {
-      "need": null,
-      "evidence_quality": null,
-      "expected_impact": null,
+      "need": 90.0,
+      "evidence_quality": 45.0,
+      "expected_impact": 50.0,
       "cost_effectiveness": null,
-      "maqasid_compatibility": null,
-      "distributional_fairness": null,
+      "maqasid_compatibility": 75.0,
+      "distributional_fairness": 60.0,
       "observed_impact": null,
-      "uncertainty": null,
-      "implementation_quality": null,
-      "long_term_sustainability": null
+      "uncertainty": 25.0,
+      "implementation_quality": 90.0,
+      "long_term_sustainability": 55.0
     },
-    "effectiveness_score": null,
+    "effectiveness_score": 61.25,
+    "budget_usd": 5080000000.0,
     "country_name": "United Kingdom",
-    "country_iso3": "GBR"
+    "country_iso3": "GBR",
+    "policy_rank": 2
+  },
+  {
+    "policy_id": "USA-EDU-2025-014",
+    "country": "USA",
+    "title": "Early Literacy Acceleration Grant",
+    "status": "active",
+    "start_date": "2025-09-01",
+    "end_date": "2028-08-31",
+    "government_department": "Department of Education",
+    "policy_area": "education",
+    "legal_basis": [
+      "Elementary and Secondary Education Act"
+    ],
+    "constitutional_constraints": [
+      "10th Amendment \u2014 state education residual powers"
+    ],
+    "maqasid_domains": [
+      "hifz_al_aql",
+      "hifz_al_nasl",
+      "adl"
+    ],
+    "urf": [
+      {
+        "tradition": "liberal_constitutional",
+        "principle": "equal_protection_education",
+        "layer": "urf"
+      }
+    ],
+    "public_value_domains": [
+      "D3",
+      "D4",
+      "D6"
+    ],
+    "stated_objectives": [
+      "Raise grade-3 reading proficiency among low-income districts without narrowing curriculum unlawfully"
+    ],
+    "target_population": [
+      "Title I school districts",
+      "Children aged 5\u20139"
+    ],
+    "budget": {
+      "amount": 2800000000,
+      "currency": "USD",
+      "period_years": 3,
+      "fx_to_usd": 1.0,
+      "maqasid_allocation": {
+        "hifz_al_aql": 0.7,
+        "hifz_al_nasl": 0.2,
+        "adl": 0.1
+      }
+    },
+    "baseline": {
+      "grade3_proficiency": {
+        "value": null,
+        "unavailable_reason": "Pending NAEP / state release linkage"
+      }
+    },
+    "targets": {
+      "grade3_proficiency_lift": {
+        "value": 0.12,
+        "direction": "increase",
+        "maqasid": "hifz_al_aql"
+      }
+    },
+    "observed_outcomes": {},
+    "review_status": "unverified",
+    "ai_generated": true,
+    "sources": [
+      "world_bank"
+    ],
+    "walkthrough": false,
+    "framework": "maqasid",
+    "score_components": {
+      "need": 90.0,
+      "evidence_quality": 45.0,
+      "expected_impact": 50.0,
+      "cost_effectiveness": null,
+      "maqasid_compatibility": 75.0,
+      "distributional_fairness": 60.0,
+      "observed_impact": null,
+      "uncertainty": 25.0,
+      "implementation_quality": 90.0,
+      "long_term_sustainability": 55.0
+    },
+    "effectiveness_score": 61.25,
+    "budget_usd": 2800000000.0,
+    "country_name": "United States",
+    "country_iso3": "USA",
+    "policy_rank": 3
+  },
+  {
+    "policy_id": "DNK-ENV-2024-003",
+    "country": "DNK",
+    "title": "District Heating Decarbonisation Programme",
+    "status": "active",
+    "start_date": "2024-01-01",
+    "end_date": "2030-12-31",
+    "government_department": "Ministry of Climate, Energy and Utilities",
+    "policy_area": "environment",
+    "legal_basis": [
+      "Danish Climate Act"
+    ],
+    "constitutional_constraints": [],
+    "maqasid_domains": [
+      "la_darar",
+      "hifz_al_mal",
+      "amanah"
+    ],
+    "urf": [
+      {
+        "tradition": "halakha",
+        "principle": "bal_tashchit",
+        "layer": "urf"
+      }
+    ],
+    "public_value_domains": [
+      "D10",
+      "D5",
+      "D9"
+    ],
+    "stated_objectives": [
+      "Cut district-heating emissions while maintaining household affordability and grid reliability"
+    ],
+    "target_population": [
+      "Municipal utilities",
+      "District-heating households"
+    ],
+    "budget": {
+      "amount": 18000000000,
+      "currency": "DKK",
+      "period_years": 7,
+      "fx_to_usd": 0.145,
+      "maqasid_allocation": {
+        "la_darar": 0.55,
+        "hifz_al_mal": 0.3,
+        "amanah": 0.15
+      }
+    },
+    "baseline": {
+      "heating_emissions_mt": {
+        "value": null,
+        "unavailable_reason": "Pending national inventory link"
+      }
+    },
+    "targets": {
+      "heating_emissions_cut": {
+        "value": 0.45,
+        "direction": "decrease",
+        "maqasid": "la_darar"
+      }
+    },
+    "observed_outcomes": {},
+    "review_status": "unverified",
+    "ai_generated": true,
+    "sources": [
+      "world_bank"
+    ],
+    "walkthrough": false,
+    "framework": "maqasid",
+    "score_components": {
+      "need": 90.0,
+      "evidence_quality": 45.0,
+      "expected_impact": 50.0,
+      "cost_effectiveness": null,
+      "maqasid_compatibility": 75.0,
+      "distributional_fairness": 60.0,
+      "observed_impact": null,
+      "uncertainty": 25.0,
+      "implementation_quality": 90.0,
+      "long_term_sustainability": 55.0
+    },
+    "effectiveness_score": 61.25,
+    "budget_usd": 2610000000.0,
+    "country_name": "Denmark",
+    "country_iso3": "DNK",
+    "policy_rank": 4
+  },
+  {
+    "policy_id": "IND-HEALTH-2025-008",
+    "country": "IND",
+    "title": "Rural Primary Care Expansion Mission",
+    "status": "active",
+    "start_date": "2025-04-01",
+    "end_date": "2030-03-31",
+    "government_department": "Ministry of Health and Family Welfare",
+    "policy_area": "health",
+    "legal_basis": [
+      "National Health Mission framework"
+    ],
+    "constitutional_constraints": [
+      "Directive Principles \u2014 public health"
+    ],
+    "maqasid_domains": [
+      "hifz_al_nafs",
+      "hifz_al_nasl",
+      "adl",
+      "karamah"
+    ],
+    "urf": [
+      {
+        "tradition": "halakha",
+        "principle": "pikuach_nefesh",
+        "layer": "urf"
+      }
+    ],
+    "public_value_domains": [
+      "D2",
+      "D4",
+      "D6",
+      "D7"
+    ],
+    "stated_objectives": [
+      "Expand staffing and diagnostics in rural primary health centres to reduce avoidable mortality"
+    ],
+    "target_population": [
+      "Rural PHC catchments",
+      "Women and children under-5"
+    ],
+    "budget": {
+      "amount": 450000000000,
+      "currency": "INR",
+      "period_years": 5,
+      "fx_to_usd": 0.012,
+      "maqasid_allocation": {
+        "hifz_al_nafs": 0.45,
+        "hifz_al_nasl": 0.25,
+        "adl": 0.15,
+        "karamah": 0.15
+      }
+    },
+    "baseline": {
+      "phc_staffing_gap": {
+        "value": null,
+        "unavailable_reason": "Pending MoHFW statistical annex"
+      }
+    },
+    "targets": {
+      "under5_mortality_cut": {
+        "value": 0.25,
+        "direction": "decrease",
+        "maqasid": "hifz_al_nafs"
+      }
+    },
+    "observed_outcomes": {},
+    "review_status": "unverified",
+    "ai_generated": true,
+    "sources": [
+      "unicef",
+      "who"
+    ],
+    "walkthrough": false,
+    "framework": "maqasid",
+    "score_components": {
+      "need": 94.0,
+      "evidence_quality": 70.0,
+      "expected_impact": 50.0,
+      "cost_effectiveness": null,
+      "maqasid_compatibility": 75.0,
+      "distributional_fairness": 60.0,
+      "observed_impact": null,
+      "uncertainty": 25.0,
+      "implementation_quality": 90.0,
+      "long_term_sustainability": 55.0
+    },
+    "effectiveness_score": 64.88,
+    "budget_usd": 5400000000.0,
+    "country_name": "India",
+    "country_iso3": "IND",
+    "policy_rank": 1
+  },
+  {
+    "policy_id": "SGP-HOUSING-2023-002",
+    "country": "SGP",
+    "title": "HDB Aging-in-Place Retrofit Programme",
+    "status": "active",
+    "start_date": "2023-07-01",
+    "end_date": "2028-06-30",
+    "government_department": "Ministry of National Development",
+    "policy_area": "housing",
+    "legal_basis": [
+      "Housing and Development Act"
+    ],
+    "constitutional_constraints": [],
+    "maqasid_domains": [
+      "karamah",
+      "hifz_al_nafs",
+      "hifz_al_nasl",
+      "hifz_al_mal"
+    ],
+    "urf": [
+      {
+        "tradition": "halakha",
+        "principle": "kavod_habriyot",
+        "layer": "urf"
+      }
+    ],
+    "public_value_domains": [
+      "D7",
+      "D2",
+      "D4",
+      "D5"
+    ],
+    "stated_objectives": [
+      "Retrofit older HDB blocks for accessibility and fall prevention while controlling resident cost burden"
+    ],
+    "target_population": [
+      "Elderly HDB residents",
+      "Multi-generational households"
+    ],
+    "budget": {
+      "amount": 3200000000,
+      "currency": "SGD",
+      "period_years": 5,
+      "fx_to_usd": 0.74,
+      "maqasid_allocation": {
+        "karamah": 0.35,
+        "hifz_al_nafs": 0.3,
+        "hifz_al_nasl": 0.2,
+        "hifz_al_mal": 0.15
+      }
+    },
+    "baseline": {
+      "fall_injury_rate": {
+        "value": null,
+        "unavailable_reason": "Pending MOH / HDB joint release"
+      }
+    },
+    "targets": {
+      "accessibility_coverage": {
+        "value": 0.8,
+        "direction": "increase",
+        "maqasid": "karamah"
+      }
+    },
+    "observed_outcomes": {},
+    "review_status": "unverified",
+    "ai_generated": true,
+    "sources": [
+      "world_bank"
+    ],
+    "walkthrough": false,
+    "framework": "maqasid",
+    "score_components": {
+      "need": 90.0,
+      "evidence_quality": 45.0,
+      "expected_impact": 50.0,
+      "cost_effectiveness": null,
+      "maqasid_compatibility": 75.0,
+      "distributional_fairness": 60.0,
+      "observed_impact": null,
+      "uncertainty": 25.0,
+      "implementation_quality": 90.0,
+      "long_term_sustainability": 55.0
+    },
+    "effectiveness_score": 61.25,
+    "budget_usd": 2368000000.0,
+    "country_name": "Singapore",
+    "country_iso3": "SGP",
+    "policy_rank": 5
   }
 ]
