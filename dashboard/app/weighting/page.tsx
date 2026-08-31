@@ -63,13 +63,13 @@ export default function WeightingLabPage() {
   }, [scores, weights]);
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-2">Weighting Laboratory</h2>
-      <p className="text-gray-400 mb-2 max-w-2xl">
+    <main className="max-w-6xl mx-auto px-4 py-16">
+      <h2 className="display text-4xl font-bold mb-2">Weighting Laboratory</h2>
+      <p className="text-[var(--muted)] mb-2 max-w-2xl">
         Adjust Maqasid domain weights and recompute rankings instantly in the browser.
         Ideology becomes visible — the global objective function stays Maqasid.
       </p>
-      <p className="text-sm text-amber-200/80 mb-8 max-w-2xl">
+      <p className="text-sm text-[var(--ember-soft)] mb-8 max-w-2xl">
         ʿUrf (local customs, including Halacha) does not change these weights. Urf is
         country-tunable only where it serves Maqasid and does not contradict it.
       </p>
@@ -130,6 +130,6 @@ export default function WeightingLabPage() {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

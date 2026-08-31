@@ -36,9 +36,9 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
   }
 
   return (
-    <div>
+    <main className="max-w-6xl mx-auto px-4 py-16">
       <div className="mb-6">
-        <Link href="/" className="text-sm text-gray-400">
+        <Link href="/rankings/" className="text-sm text-[var(--muted)]">
           ← Global rankings
         </Link>
       </div>
@@ -46,18 +46,18 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
         <div>
           <h2 className="text-3xl font-bold">{score.country_name}</h2>
-          <p className="text-gray-400">{code} · scored on Maqasid</p>
-          {score.urf_note && <p className="text-xs text-gray-500 mt-2 max-w-xl">{score.urf_note}</p>}
+          <p className="text-[var(--muted)]">{code} · scored on Maqasid</p>
+          {score.urf_note && <p className="text-xs text-[var(--muted)] mt-2 max-w-xl">{score.urf_note}</p>}
         </div>
         <div className="card text-center min-w-[200px]">
-          <div className="text-sm text-gray-400">Global rank</div>
-          <div className="text-4xl font-bold">#{score.global_rank ?? "—"}</div>
-          <div className="text-sm text-gray-400 mt-2">OSD Score</div>
-          <div className="text-3xl font-bold text-blue-400">
+          <div className="text-sm text-[var(--muted)]">Global rank</div>
+          <div className="display text-4xl font-bold">#{score.global_rank ?? "—"}</div>
+          <div className="text-sm text-[var(--muted)] mt-2">OSD Score</div>
+          <div className="text-3xl font-bold bg-gradient-to-r from-[var(--ember)] to-[var(--ice)] bg-clip-text text-transparent">
             {score.overall_score?.toFixed(1) ?? "N/A"}
           </div>
           {score.ranking_robustness !== null && (
-            <div className="text-xs text-gray-400 mt-2">
+            <div className="text-xs text-[var(--muted)] mt-2">
               Ranking robustness: {score.ranking_robustness}%
             </div>
           )}
@@ -135,6 +135,6 @@ export default async function CountryPage({ params }: { params: Promise<{ iso3: 
           {JSON.stringify(score.provenance, null, 2)}
         </pre>
       </div>
-    </div>
+    </main>
   );
 }

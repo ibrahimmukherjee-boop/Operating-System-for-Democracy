@@ -8,11 +8,11 @@ Local customs (**ʿurf**), including **Halacha**, can be tuned per country **onl
 
 ## Live site (GitHub Pages)
 
-After you click **Create repo** on this project and enable GitHub Pages (Settings → Pages → Source: GitHub Actions), the site deploys automatically from `.github/workflows/pages.yml`.
+**Repository:** https://github.com/ibrahimmukherjee-boop/Operating-System-for-a-Democracy
 
-Expected URL pattern:
+**Pages:** https://ibrahimmukherjee-boop.github.io/Operating-System-for-a-Democracy/
 
-`https://<your-github-username>.github.io/<repo-name>/`
+After push to `main`, `.github/workflows/pages.yml` builds the static site and deploys. Enable Pages → Source: GitHub Actions if prompted.
 
 ## Framework hierarchy
 

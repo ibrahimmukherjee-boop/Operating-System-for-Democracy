@@ -35,9 +35,9 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
   const allocation = (policy.budget?.maqasid_allocation || {}) as Record<string, number>;
 
   return (
-    <div>
+    <main className="max-w-6xl mx-auto px-4 py-16">
       <div className="mb-6">
-        <Link href={`/countries/${policy.country_iso3}/`} className="text-sm text-gray-400">
+        <Link href={`/countries/${policy.country_iso3}/`} className="text-sm text-[var(--muted)]">
           ← {policy.country_name}
         </Link>
       </div>
@@ -172,9 +172,9 @@ export default async function PolicyPage({ params }: { params: Promise<{ id: str
             ))}
           </div>
         ) : (
-          <p className="text-gray-400 text-sm">No score components</p>
+          <p className="text-[var(--muted)] text-sm">No score components</p>
         )}
       </div>
-    </div>
+    </main>
   );
 }

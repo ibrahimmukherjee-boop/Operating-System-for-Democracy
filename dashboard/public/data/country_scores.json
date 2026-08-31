@@ -42,7 +42,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.832881",
+          "computed_at": "2026-08-31T19:29:40.833459",
           "indicators": [
             {
               "indicator_id": "D2_homicide_rate",
@@ -139,7 +139,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833361",
+          "computed_at": "2026-08-31T19:29:40.833934",
           "indicators": [
             {
               "indicator_id": "D6_rule_of_law",
@@ -186,7 +186,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833375",
+          "computed_at": "2026-08-31T19:29:40.833953",
           "indicators": [
             {
               "indicator_id": "D8_electoral_democracy",
@@ -214,7 +214,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833383",
+          "computed_at": "2026-08-31T19:29:40.833962",
           "indicators": [
             {
               "indicator_id": "D9_corruption_perception",
@@ -267,7 +267,7 @@
         "D9": 1.0,
         "D10": 1.0
       },
-      "computed_at": "2026-08-31T18:38:09.833404",
+      "computed_at": "2026-08-31T19:29:40.833982",
       "red_line_violations": [],
       "red_line_cap_applied": null
     },
@@ -318,7 +318,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833417",
+          "computed_at": "2026-08-31T19:29:40.833995",
           "indicators": [
             {
               "indicator_id": "D2_homicide_rate",
@@ -395,7 +395,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833841",
+          "computed_at": "2026-08-31T19:29:40.834433",
           "indicators": [
             {
               "indicator_id": "D5_gdp_per_capita_ppp",
@@ -423,7 +423,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833851",
+          "computed_at": "2026-08-31T19:29:40.834443",
           "indicators": [
             {
               "indicator_id": "D6_vdem_liberal_democracy",
@@ -470,7 +470,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833862",
+          "computed_at": "2026-08-31T19:29:40.834454",
           "indicators": [
             {
               "indicator_id": "D8_electoral_democracy",
@@ -517,7 +517,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833873",
+          "computed_at": "2026-08-31T19:29:40.834467",
           "indicators": [
             {
               "indicator_id": "D10_co2_per_capita",
@@ -550,7 +550,7 @@
         "D9": 1.0,
         "D10": 1.0
       },
-      "computed_at": "2026-08-31T18:38:09.833885",
+      "computed_at": "2026-08-31T19:29:40.834480",
       "red_line_violations": [],
       "red_line_cap_applied": null
     },
@@ -601,7 +601,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.833896",
+          "computed_at": "2026-08-31T19:29:40.834495",
           "indicators": [
             {
               "indicator_id": "D2_homicide_rate",
@@ -678,7 +678,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834316",
+          "computed_at": "2026-08-31T19:29:40.834934",
           "indicators": [
             {
               "indicator_id": "D5_gini_index",
@@ -706,7 +706,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834325",
+          "computed_at": "2026-08-31T19:29:40.834943",
           "indicators": [
             {
               "indicator_id": "D6_rule_of_law",
@@ -772,7 +772,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834340",
+          "computed_at": "2026-08-31T19:29:40.834963",
           "indicators": [
             {
               "indicator_id": "D9_corruption_perception",
@@ -800,7 +800,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834349",
+          "computed_at": "2026-08-31T19:29:40.834971",
           "indicators": [
             {
               "indicator_id": "D10_renewable_energy_share",
@@ -833,7 +833,7 @@
         "D9": 1.0,
         "D10": 1.0
       },
-      "computed_at": "2026-08-31T18:38:09.834359",
+      "computed_at": "2026-08-31T19:29:40.834982",
       "red_line_violations": [],
       "red_line_cap_applied": null
     },
@@ -884,7 +884,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834369",
+          "computed_at": "2026-08-31T19:29:40.834992",
           "indicators": [
             {
               "indicator_id": "D2_life_expectancy",
@@ -912,7 +912,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834378",
+          "computed_at": "2026-08-31T19:29:40.835001",
           "indicators": [
             {
               "indicator_id": "D3_literacy_rate",
@@ -940,7 +940,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834386",
+          "computed_at": "2026-08-31T19:29:40.835014",
           "indicators": [
             {
               "indicator_id": "D4_child_mortality",
@@ -968,7 +968,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834395",
+          "computed_at": "2026-08-31T19:29:40.835023",
           "indicators": [
             {
               "indicator_id": "D5_gdp_per_capita_ppp",
@@ -1035,7 +1035,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834410",
+          "computed_at": "2026-08-31T19:29:40.835042",
           "indicators": [
             {
               "indicator_id": "D8_electoral_democracy",
@@ -1107,7 +1107,7 @@
         "D9": 1.0,
         "D10": 1.0
       },
-      "computed_at": "2026-08-31T18:38:09.834428",
+      "computed_at": "2026-08-31T19:29:40.835065",
       "red_line_violations": [],
       "red_line_cap_applied": null
     },
@@ -1158,7 +1158,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834437",
+          "computed_at": "2026-08-31T19:29:40.835075",
           "indicators": [
             {
               "indicator_id": "D2_homicide_rate",
@@ -1235,7 +1235,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834877",
+          "computed_at": "2026-08-31T19:29:40.835498",
           "indicators": [
             {
               "indicator_id": "D5_gdp_per_capita_ppp",
@@ -1263,7 +1263,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834887",
+          "computed_at": "2026-08-31T19:29:40.835507",
           "indicators": [
             {
               "indicator_id": "D6_rule_of_law",
@@ -1310,7 +1310,7 @@
         "provenance": {
           "model_version": "0.1.0",
           "method": "reliability_weighted_mean",
-          "computed_at": "2026-08-31T18:38:09.834900",
+          "computed_at": "2026-08-31T19:29:40.835518",
           "indicators": [
             {
               "indicator_id": "D8_electoral_democracy",
@@ -1382,7 +1382,7 @@
         "D9": 1.0,
         "D10": 1.0
       },
-      "computed_at": "2026-08-31T18:38:09.834918",
+      "computed_at": "2026-08-31T19:29:40.835541",
       "red_line_violations": [],
       "red_line_cap_applied": null
     },
