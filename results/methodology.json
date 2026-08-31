@@ -2,5 +2,7 @@
   "framework": "maqasid",
   "overall_method": "weighted_geometric_mean",
   "urf": "local customs under Maqasid (Halacha is urf)",
-  "model_version": "0.1.0"
+  "model_version": "0.1.0",
+  "countries": 195,
+  "scored": 5
 }

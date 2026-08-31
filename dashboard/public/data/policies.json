@@ -23,7 +23,23 @@
       "adl",
       "hifz_al_aql"
     ],
-    "urf": [],
+    "urf": [
+      {
+        "tradition": "halakha",
+        "principle": "pikuach_nefesh",
+        "layer": "urf"
+      },
+      {
+        "tradition": "halakha",
+        "principle": "kavod_habriyot",
+        "layer": "urf"
+      },
+      {
+        "tradition": "liberal_constitutional",
+        "principle": "article_8_home",
+        "layer": "urf"
+      }
+    ],
     "public_value_domains": [
       "D2",
       "D3",

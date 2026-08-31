@@ -1,14 +1,18 @@
 /** Static data client for GitHub Pages — no local API required. */
 
 export interface RankingEntry {
-  rank: number;
+  rank: number | null;
   country_iso3: string;
   country_name: string;
+  region?: string | null;
   overall_score: number | null;
   ci_lower: number | null;
   ci_upper: number | null;
-  trend: string | null;
-  red_flags: number;
+  trend?: string | null;
+  red_flags?: number;
+  status?: string;
+  unavailable_reason?: string | null;
+  pilot?: boolean;
 }
 
 export interface RankingsResponse {
@@ -17,6 +21,8 @@ export interface RankingsResponse {
   weight_profile: string;
   computed_at: string | null;
   total_countries: number;
+  scored_countries?: number;
+  unavailable_countries?: number;
   framework?: string;
 }
 
@@ -47,7 +53,7 @@ export interface CountryScore {
   red_line_events: Record<string, unknown>[];
   provenance: Record<string, unknown> | null;
   model_version: string;
-  framework?: string;
+  status?: string;
   urf_note?: string;
 }
 
@@ -114,4 +120,5 @@ export const api = {
     return p;
   },
   meta: () => loadJson<Record<string, unknown>>("meta.json"),
+  countryScores: () => loadJson<Record<string, CountryScore>>("country_scores.json"),
 };

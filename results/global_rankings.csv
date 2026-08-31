@@ -1,6 +1,196 @@
-rank,iso3,country_name,overall_score,model_version,framework
-1,DNK,Denmark,86.4,0.1.0,maqasid
-2,GBR,United Kingdom,81.75,0.1.0,maqasid
-3,SGP,Singapore,78.13,0.1.0,maqasid
-4,USA,United States,66.99,0.1.0,maqasid
-5,IND,India,51.49,0.1.0,maqasid
+rank,iso3,country_name,region,overall_score,status,model_version,framework
+1,DNK,Denmark,Europe,86.4,scored,0.1.0,maqasid
+2,GBR,United Kingdom,Europe,81.75,scored,0.1.0,maqasid
+3,SGP,Singapore,Asia,78.13,scored,0.1.0,maqasid
+4,USA,United States,Americas,66.99,scored,0.1.0,maqasid
+5,IND,India,Asia,51.49,scored,0.1.0,maqasid
+,AFG,Afghanistan,Asia,,unavailable,0.1.0,maqasid
+,ALB,Albania,Europe,,unavailable,0.1.0,maqasid
+,DZA,Algeria,Africa,,unavailable,0.1.0,maqasid
+,AND,Andorra,Europe,,unavailable,0.1.0,maqasid
+,AGO,Angola,Africa,,unavailable,0.1.0,maqasid
+,ATG,Antigua and Barbuda,Americas,,unavailable,0.1.0,maqasid
+,ARG,Argentina,Americas,,unavailable,0.1.0,maqasid
+,ARM,Armenia,Asia,,unavailable,0.1.0,maqasid
+,AUS,Australia,Oceania,,unavailable,0.1.0,maqasid
+,AUT,Austria,Europe,,unavailable,0.1.0,maqasid
+,AZE,Azerbaijan,Asia,,unavailable,0.1.0,maqasid
+,BHS,Bahamas,Americas,,unavailable,0.1.0,maqasid
+,BHR,Bahrain,Asia,,unavailable,0.1.0,maqasid
+,BGD,Bangladesh,Asia,,unavailable,0.1.0,maqasid
+,BRB,Barbados,Americas,,unavailable,0.1.0,maqasid
+,BLR,Belarus,Europe,,unavailable,0.1.0,maqasid
+,BEL,Belgium,Europe,,unavailable,0.1.0,maqasid
+,BLZ,Belize,Americas,,unavailable,0.1.0,maqasid
+,BEN,Benin,Africa,,unavailable,0.1.0,maqasid
+,BTN,Bhutan,Asia,,unavailable,0.1.0,maqasid
+,BOL,Bolivia,Americas,,unavailable,0.1.0,maqasid
+,BIH,Bosnia and Herzegovina,Europe,,unavailable,0.1.0,maqasid
+,BWA,Botswana,Africa,,unavailable,0.1.0,maqasid
+,BRA,Brazil,Americas,,unavailable,0.1.0,maqasid
+,BRN,Brunei,Asia,,unavailable,0.1.0,maqasid
+,BGR,Bulgaria,Europe,,unavailable,0.1.0,maqasid
+,BFA,Burkina Faso,Africa,,unavailable,0.1.0,maqasid
+,BDI,Burundi,Africa,,unavailable,0.1.0,maqasid
+,CPV,Cabo Verde,Africa,,unavailable,0.1.0,maqasid
+,KHM,Cambodia,Asia,,unavailable,0.1.0,maqasid
+,CMR,Cameroon,Africa,,unavailable,0.1.0,maqasid
+,CAN,Canada,Americas,,unavailable,0.1.0,maqasid
+,CAF,Central African Republic,Africa,,unavailable,0.1.0,maqasid
+,TCD,Chad,Africa,,unavailable,0.1.0,maqasid
+,CHL,Chile,Americas,,unavailable,0.1.0,maqasid
+,CHN,China,Asia,,unavailable,0.1.0,maqasid
+,COL,Colombia,Americas,,unavailable,0.1.0,maqasid
+,COM,Comoros,Africa,,unavailable,0.1.0,maqasid
+,COG,Congo,Africa,,unavailable,0.1.0,maqasid
+,CRI,Costa Rica,Americas,,unavailable,0.1.0,maqasid
+,HRV,Croatia,Europe,,unavailable,0.1.0,maqasid
+,CUB,Cuba,Americas,,unavailable,0.1.0,maqasid
+,CYP,Cyprus,Asia,,unavailable,0.1.0,maqasid
+,CZE,Czechia,Europe,,unavailable,0.1.0,maqasid
+,CIV,Côte d'Ivoire,Africa,,unavailable,0.1.0,maqasid
+,COD,DR Congo,Africa,,unavailable,0.1.0,maqasid
+,DJI,Djibouti,Africa,,unavailable,0.1.0,maqasid
+,DMA,Dominica,Americas,,unavailable,0.1.0,maqasid
+,DOM,Dominican Republic,Americas,,unavailable,0.1.0,maqasid
+,ECU,Ecuador,Americas,,unavailable,0.1.0,maqasid
+,EGY,Egypt,Africa,,unavailable,0.1.0,maqasid
+,SLV,El Salvador,Americas,,unavailable,0.1.0,maqasid
+,GNQ,Equatorial Guinea,Africa,,unavailable,0.1.0,maqasid
+,ERI,Eritrea,Africa,,unavailable,0.1.0,maqasid
+,EST,Estonia,Europe,,unavailable,0.1.0,maqasid
+,SWZ,Eswatini,Africa,,unavailable,0.1.0,maqasid
+,ETH,Ethiopia,Africa,,unavailable,0.1.0,maqasid
+,FJI,Fiji,Oceania,,unavailable,0.1.0,maqasid
+,FIN,Finland,Europe,,unavailable,0.1.0,maqasid
+,FRA,France,Europe,,unavailable,0.1.0,maqasid
+,GAB,Gabon,Africa,,unavailable,0.1.0,maqasid
+,GMB,Gambia,Africa,,unavailable,0.1.0,maqasid
+,GEO,Georgia,Asia,,unavailable,0.1.0,maqasid
+,DEU,Germany,Europe,,unavailable,0.1.0,maqasid
+,GHA,Ghana,Africa,,unavailable,0.1.0,maqasid
+,GRC,Greece,Europe,,unavailable,0.1.0,maqasid
+,GRD,Grenada,Americas,,unavailable,0.1.0,maqasid
+,GTM,Guatemala,Americas,,unavailable,0.1.0,maqasid
+,GIN,Guinea,Africa,,unavailable,0.1.0,maqasid
+,GNB,Guinea-Bissau,Africa,,unavailable,0.1.0,maqasid
+,GUY,Guyana,Americas,,unavailable,0.1.0,maqasid
+,HTI,Haiti,Americas,,unavailable,0.1.0,maqasid
+,VAT,Holy See,Europe,,unavailable,0.1.0,maqasid
+,HND,Honduras,Americas,,unavailable,0.1.0,maqasid
+,HUN,Hungary,Europe,,unavailable,0.1.0,maqasid
+,ISL,Iceland,Europe,,unavailable,0.1.0,maqasid
+,IDN,Indonesia,Asia,,unavailable,0.1.0,maqasid
+,IRN,Iran,Asia,,unavailable,0.1.0,maqasid
+,IRQ,Iraq,Asia,,unavailable,0.1.0,maqasid
+,IRL,Ireland,Europe,,unavailable,0.1.0,maqasid
+,ISR,Israel,Asia,,unavailable,0.1.0,maqasid
+,ITA,Italy,Europe,,unavailable,0.1.0,maqasid
+,JAM,Jamaica,Americas,,unavailable,0.1.0,maqasid
+,JPN,Japan,Asia,,unavailable,0.1.0,maqasid
+,JOR,Jordan,Asia,,unavailable,0.1.0,maqasid
+,KAZ,Kazakhstan,Asia,,unavailable,0.1.0,maqasid
+,KEN,Kenya,Africa,,unavailable,0.1.0,maqasid
+,KIR,Kiribati,Oceania,,unavailable,0.1.0,maqasid
+,KWT,Kuwait,Asia,,unavailable,0.1.0,maqasid
+,KGZ,Kyrgyzstan,Asia,,unavailable,0.1.0,maqasid
+,LAO,Laos,Asia,,unavailable,0.1.0,maqasid
+,LVA,Latvia,Europe,,unavailable,0.1.0,maqasid
+,LBN,Lebanon,Asia,,unavailable,0.1.0,maqasid
+,LSO,Lesotho,Africa,,unavailable,0.1.0,maqasid
+,LBR,Liberia,Africa,,unavailable,0.1.0,maqasid
+,LBY,Libya,Africa,,unavailable,0.1.0,maqasid
+,LIE,Liechtenstein,Europe,,unavailable,0.1.0,maqasid
+,LTU,Lithuania,Europe,,unavailable,0.1.0,maqasid
+,LUX,Luxembourg,Europe,,unavailable,0.1.0,maqasid
+,MDG,Madagascar,Africa,,unavailable,0.1.0,maqasid
+,MWI,Malawi,Africa,,unavailable,0.1.0,maqasid
+,MYS,Malaysia,Asia,,unavailable,0.1.0,maqasid
+,MDV,Maldives,Asia,,unavailable,0.1.0,maqasid
+,MLI,Mali,Africa,,unavailable,0.1.0,maqasid
+,MLT,Malta,Europe,,unavailable,0.1.0,maqasid
+,MHL,Marshall Islands,Oceania,,unavailable,0.1.0,maqasid
+,MRT,Mauritania,Africa,,unavailable,0.1.0,maqasid
+,MUS,Mauritius,Africa,,unavailable,0.1.0,maqasid
+,MEX,Mexico,Americas,,unavailable,0.1.0,maqasid
+,FSM,Micronesia,Oceania,,unavailable,0.1.0,maqasid
+,MDA,Moldova,Europe,,unavailable,0.1.0,maqasid
+,MCO,Monaco,Europe,,unavailable,0.1.0,maqasid
+,MNG,Mongolia,Asia,,unavailable,0.1.0,maqasid
+,MNE,Montenegro,Europe,,unavailable,0.1.0,maqasid
+,MAR,Morocco,Africa,,unavailable,0.1.0,maqasid
+,MOZ,Mozambique,Africa,,unavailable,0.1.0,maqasid
+,MMR,Myanmar,Asia,,unavailable,0.1.0,maqasid
+,NAM,Namibia,Africa,,unavailable,0.1.0,maqasid
+,NRU,Nauru,Oceania,,unavailable,0.1.0,maqasid
+,NPL,Nepal,Asia,,unavailable,0.1.0,maqasid
+,NLD,Netherlands,Europe,,unavailable,0.1.0,maqasid
+,NZL,New Zealand,Oceania,,unavailable,0.1.0,maqasid
+,NIC,Nicaragua,Americas,,unavailable,0.1.0,maqasid
+,NER,Niger,Africa,,unavailable,0.1.0,maqasid
+,NGA,Nigeria,Africa,,unavailable,0.1.0,maqasid
+,PRK,North Korea,Asia,,unavailable,0.1.0,maqasid
+,MKD,North Macedonia,Europe,,unavailable,0.1.0,maqasid
+,NOR,Norway,Europe,,unavailable,0.1.0,maqasid
+,OMN,Oman,Asia,,unavailable,0.1.0,maqasid
+,PAK,Pakistan,Asia,,unavailable,0.1.0,maqasid
+,PLW,Palau,Oceania,,unavailable,0.1.0,maqasid
+,PSE,Palestine,Asia,,unavailable,0.1.0,maqasid
+,PAN,Panama,Americas,,unavailable,0.1.0,maqasid
+,PNG,Papua New Guinea,Oceania,,unavailable,0.1.0,maqasid
+,PRY,Paraguay,Americas,,unavailable,0.1.0,maqasid
+,PER,Peru,Americas,,unavailable,0.1.0,maqasid
+,PHL,Philippines,Asia,,unavailable,0.1.0,maqasid
+,POL,Poland,Europe,,unavailable,0.1.0,maqasid
+,PRT,Portugal,Europe,,unavailable,0.1.0,maqasid
+,QAT,Qatar,Asia,,unavailable,0.1.0,maqasid
+,ROU,Romania,Europe,,unavailable,0.1.0,maqasid
+,RUS,Russia,Europe,,unavailable,0.1.0,maqasid
+,RWA,Rwanda,Africa,,unavailable,0.1.0,maqasid
+,KNA,Saint Kitts and Nevis,Americas,,unavailable,0.1.0,maqasid
+,LCA,Saint Lucia,Americas,,unavailable,0.1.0,maqasid
+,VCT,Saint Vincent and the Grenadines,Americas,,unavailable,0.1.0,maqasid
+,WSM,Samoa,Oceania,,unavailable,0.1.0,maqasid
+,SMR,San Marino,Europe,,unavailable,0.1.0,maqasid
+,STP,Sao Tome and Principe,Africa,,unavailable,0.1.0,maqasid
+,SAU,Saudi Arabia,Asia,,unavailable,0.1.0,maqasid
+,SEN,Senegal,Africa,,unavailable,0.1.0,maqasid
+,SRB,Serbia,Europe,,unavailable,0.1.0,maqasid
+,SYC,Seychelles,Africa,,unavailable,0.1.0,maqasid
+,SLE,Sierra Leone,Africa,,unavailable,0.1.0,maqasid
+,SVK,Slovakia,Europe,,unavailable,0.1.0,maqasid
+,SVN,Slovenia,Europe,,unavailable,0.1.0,maqasid
+,SLB,Solomon Islands,Oceania,,unavailable,0.1.0,maqasid
+,SOM,Somalia,Africa,,unavailable,0.1.0,maqasid
+,ZAF,South Africa,Africa,,unavailable,0.1.0,maqasid
+,KOR,South Korea,Asia,,unavailable,0.1.0,maqasid
+,SSD,South Sudan,Africa,,unavailable,0.1.0,maqasid
+,ESP,Spain,Europe,,unavailable,0.1.0,maqasid
+,LKA,Sri Lanka,Asia,,unavailable,0.1.0,maqasid
+,SDN,Sudan,Africa,,unavailable,0.1.0,maqasid
+,SUR,Suriname,Americas,,unavailable,0.1.0,maqasid
+,SWE,Sweden,Europe,,unavailable,0.1.0,maqasid
+,CHE,Switzerland,Europe,,unavailable,0.1.0,maqasid
+,SYR,Syria,Asia,,unavailable,0.1.0,maqasid
+,TJK,Tajikistan,Asia,,unavailable,0.1.0,maqasid
+,TZA,Tanzania,Africa,,unavailable,0.1.0,maqasid
+,THA,Thailand,Asia,,unavailable,0.1.0,maqasid
+,TLS,Timor-Leste,Asia,,unavailable,0.1.0,maqasid
+,TGO,Togo,Africa,,unavailable,0.1.0,maqasid
+,TON,Tonga,Oceania,,unavailable,0.1.0,maqasid
+,TTO,Trinidad and Tobago,Americas,,unavailable,0.1.0,maqasid
+,TUN,Tunisia,Africa,,unavailable,0.1.0,maqasid
+,TKM,Turkmenistan,Asia,,unavailable,0.1.0,maqasid
+,TUV,Tuvalu,Oceania,,unavailable,0.1.0,maqasid
+,TUR,Türkiye,Asia,,unavailable,0.1.0,maqasid
+,UGA,Uganda,Africa,,unavailable,0.1.0,maqasid
+,UKR,Ukraine,Europe,,unavailable,0.1.0,maqasid
+,ARE,United Arab Emirates,Asia,,unavailable,0.1.0,maqasid
+,URY,Uruguay,Americas,,unavailable,0.1.0,maqasid
+,UZB,Uzbekistan,Asia,,unavailable,0.1.0,maqasid
+,VUT,Vanuatu,Oceania,,unavailable,0.1.0,maqasid
+,VEN,Venezuela,Americas,,unavailable,0.1.0,maqasid
+,VNM,Viet Nam,Asia,,unavailable,0.1.0,maqasid
+,YEM,Yemen,Asia,,unavailable,0.1.0,maqasid
+,ZMB,Zambia,Africa,,unavailable,0.1.0,maqasid
+,ZWE,Zimbabwe,Africa,,unavailable,0.1.0,maqasid

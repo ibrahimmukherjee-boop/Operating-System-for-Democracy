@@ -2,7 +2,10 @@
   "model_version": "0.1.0",
   "framework": "maqasid",
   "tagline": "Policy in. Evidence out. Power audited.",
-  "generated_at": "2026-08-31T19:29:40.838274+00:00",
+  "generated_at": "2026-08-31T21:10:49.161697+00:00",
+  "total_countries": 195,
+  "scored_countries": 5,
+  "unavailable_countries": 190,
   "pilot_countries": [
     "GBR",
     "USA",
@@ -140,5 +143,6 @@
     "definition": "Local customs tunable per country under Maqasid; must not contradict Maqasid.",
     "halakha": "Treated as urf, not a co-equal global scoring system."
   },
-  "expenditure_rule": "Every government expenditure must map to one or more Maqasid objectives."
+  "expenditure_rule": "Every government expenditure must map to one or more Maqasid objectives.",
+  "data_integrity": "Unavailable scores are explicit. No fabricated observations."
 }
