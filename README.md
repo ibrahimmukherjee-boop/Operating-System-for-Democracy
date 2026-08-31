@@ -8,9 +8,9 @@ Local customs (**ʿurf**), including **Halacha**, can be tuned per country **onl
 
 ## Live site (GitHub Pages)
 
-**Repository:** https://github.com/ibrahimmukherjee-boop/Operating-System-for-a-Democracy
+**Repository:** https://github.com/ibrahimmukherjee-boop/Operating-System-for-Democracy
 
-**Pages:** https://ibrahimmukherjee-boop.github.io/Operating-System-for-a-Democracy/
+**Pages:** https://ibrahimmukherjee-boop.github.io/Operating-System-for-Democracy/
 
 After push to `main`, `.github/workflows/pages.yml` builds the static site and deploys. Enable Pages → Source: GitHub Actions if prompted.
 

@@ -188,7 +188,7 @@ export default async function HomePage() {
           </div>
           <div>
             Open source · MIT ·{" "}
-            <a href="https://github.com/ibrahimmukherjee-boop/Operating-System-for-a-Democracy">
+            <a href="https://github.com/ibrahimmukherjee-boop/Operating-System-for-Democracy">
               GitHub
             </a>
           </div>
