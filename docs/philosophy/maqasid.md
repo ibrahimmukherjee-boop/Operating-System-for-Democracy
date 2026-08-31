@@ -1,22 +1,38 @@
-# Maqāṣid al-Sharia — Comparative Provenance
+# Maqāṣid al-Sharīʿa — the global operating system
 
-The Maqāṣid framework provides one intellectual tradition informing OSD domains. It is **not** imposed as a scoring system upon countries.
+**Operating System for a Democracy is based on Maqasid alone as the global objective function.**
 
-## Principles mapped to OSD domains
+Every country score, every policy evaluation, and **every government expenditure** must map to Maqasid objectives. Local customs (ʿurf) — including Halacha — may be tuned per country only when they serve Maqasid and do not contradict them.
 
-| Maqāṣid | Meaning | OSD Domain |
-|---------|---------|------------|
-| hifz al-dīn | Preservation of religion/conscience | D1 |
-| hifz al-nafs | Preservation of life | D2 |
-| hifz al-ʿaql | Preservation of intellect | D3 |
-| hifz al-nasl | Preservation of lineage/family | D4 |
-| hifz al-māl | Preservation of property | D5 |
-| ʿadl | Justice | D6 |
-| karāmah | Human dignity | D7 |
-| shūrā | Consultation | D8 |
-| amānah | Trustworthiness | D9 |
-| lā ḍarar | Non-harm | D10 |
+## The ten Maqasid domains
 
-## Important caveat
+| Code | Maqāṣid | OSD Domain |
+|------|---------|------------|
+| `hifz_al_din` | Preservation of religion/conscience | D1 |
+| `hifz_al_nafs` | Preservation of life | D2 |
+| `hifz_al_aql` | Preservation of intellect | D3 |
+| `hifz_al_nasl` | Preservation of lineage/family | D4 |
+| `hifz_al_mal` | Preservation of property | D5 |
+| `adl` | Justice | D6 |
+| `karamah` | Human dignity | D7 |
+| `shura` | Consultation | D8 |
+| `amanah` | Trustworthiness | D9 |
+| `la_darar` | Non-harm | D10 |
 
-Maqāṣid scholarship contains internal debates about hierarchy, scope, and application. OSD records these mappings as **comparative provenance**, not as universal legal verdicts on state behaviour.
+## Expenditure rule
+
+```
+Government expenditure
+        ↓
+Must declare Maqasid objective(s)
+        ↓
+Targets + baseline + observed outcomes
+        ↓
+Audit: did the spend advance the Maqasid aim?
+```
+
+A budget line with no Maqasid mapping is incomplete. Ministers cannot claim success on undeclared objectives.
+
+## ʿUrf (local customs)
+
+See [urf.md](urf.md). Halacha, constitutional practice, and other local norms are **not** co-equal scoring systems. They are country-tunable overlays under Maqasid.

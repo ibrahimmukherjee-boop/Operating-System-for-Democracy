@@ -1,0 +1,1393 @@
+{
+  "GBR": {
+    "country_iso3": "GBR",
+    "country_name": "United Kingdom",
+    "overall_score": 81.75,
+    "raw_geometric_score": 81.75,
+    "red_line_cap_applied": null,
+    "ci_lower": null,
+    "ci_upper": null,
+    "global_rank": 2,
+    "ranking_robustness": 100.0,
+    "domain_scores": [
+      {
+        "domain_id": "D1",
+        "domain_name": "Freedom of Religion & Conscience",
+        "maqasid": "hifz_al_din",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D1_freedom_religion_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D2",
+        "domain_name": "Life & Physical Security",
+        "maqasid": "hifz_al_nafs",
+        "score": 90.25,
+        "ci_lower": 88.5,
+        "ci_upper": 92.0,
+        "indicator_count": 2,
+        "available_indicator_count": 2,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.832881",
+          "indicators": [
+            {
+              "indicator_id": "D2_homicide_rate",
+              "value": 92.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "unodc",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            },
+            {
+              "indicator_id": "D2_life_expectancy",
+              "value": 88.5,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "who",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D3",
+        "domain_name": "Intellect, Education & Information",
+        "maqasid": "hifz_al_aql",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D3_literacy_rate",
+            "D3_education_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D4",
+        "domain_name": "Family & Child Welfare",
+        "maqasid": "hifz_al_nasl",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D4_child_mortality"
+          ]
+        }
+      },
+      {
+        "domain_id": "D5",
+        "domain_name": "Property & Economic Security",
+        "maqasid": "hifz_al_mal",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D5_gini_index",
+            "D5_gdp_per_capita_ppp"
+          ]
+        }
+      },
+      {
+        "domain_id": "D6",
+        "domain_name": "Justice & Rule of Law",
+        "maqasid": "adl",
+        "score": 82.0,
+        "ci_lower": 82.0,
+        "ci_upper": 82.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833361",
+          "indicators": [
+            {
+              "indicator_id": "D6_rule_of_law",
+              "value": 82.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "wjp",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D7",
+        "domain_name": "Human Dignity",
+        "maqasid": "karamah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D7_human_freedom_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D8",
+        "domain_name": "Democratic Consultation (Sh\u016br\u0101)",
+        "maqasid": "shura",
+        "score": 85.0,
+        "ci_lower": 85.0,
+        "ci_upper": 85.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833375",
+          "indicators": [
+            {
+              "indicator_id": "D8_electoral_democracy",
+              "value": 85.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "v_dem",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D9",
+        "domain_name": "Institutional Trust (Am\u0101nah)",
+        "maqasid": "amanah",
+        "score": 71.0,
+        "ci_lower": 71.0,
+        "ci_upper": 71.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833383",
+          "indicators": [
+            {
+              "indicator_id": "D9_corruption_perception",
+              "value": 71.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "transparency_intl",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D10",
+        "domain_name": "Environmental / Intergenerational Harm",
+        "maqasid": "la_darar",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D10_co2_per_capita",
+            "D10_renewable_energy_share"
+          ]
+        }
+      }
+    ],
+    "red_line_events": [],
+    "provenance": {
+      "model_version": "0.1.0",
+      "method": "weighted_geometric_mean",
+      "formula": "(prod(D_i^w_i))^(1/sum(w_i))",
+      "weights": {
+        "D1": 1.0,
+        "D2": 1.0,
+        "D3": 1.0,
+        "D4": 1.0,
+        "D5": 1.0,
+        "D6": 1.0,
+        "D7": 1.0,
+        "D8": 1.0,
+        "D9": 1.0,
+        "D10": 1.0
+      },
+      "computed_at": "2026-08-31T18:38:09.833404",
+      "red_line_violations": [],
+      "red_line_cap_applied": null
+    },
+    "model_version": "0.1.0",
+    "framework": "maqasid",
+    "urf_note": "Local customs (including Halacha) are urf under Maqasid \u2014 not co-equal scores."
+  },
+  "USA": {
+    "country_iso3": "USA",
+    "country_name": "United States",
+    "overall_score": 66.99,
+    "raw_geometric_score": 66.99,
+    "red_line_cap_applied": null,
+    "ci_lower": null,
+    "ci_upper": null,
+    "global_rank": 4,
+    "ranking_robustness": 100.0,
+    "domain_scores": [
+      {
+        "domain_id": "D1",
+        "domain_name": "Freedom of Religion & Conscience",
+        "maqasid": "hifz_al_din",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D1_freedom_religion_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D2",
+        "domain_name": "Life & Physical Security",
+        "maqasid": "hifz_al_nafs",
+        "score": 65.0,
+        "ci_lower": 55.0,
+        "ci_upper": 75.0,
+        "indicator_count": 2,
+        "available_indicator_count": 2,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833417",
+          "indicators": [
+            {
+              "indicator_id": "D2_homicide_rate",
+              "value": 55.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "unodc",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            },
+            {
+              "indicator_id": "D2_life_expectancy",
+              "value": 75.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "who",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D3",
+        "domain_name": "Intellect, Education & Information",
+        "maqasid": "hifz_al_aql",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D3_literacy_rate",
+            "D3_education_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D4",
+        "domain_name": "Family & Child Welfare",
+        "maqasid": "hifz_al_nasl",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D4_child_mortality"
+          ]
+        }
+      },
+      {
+        "domain_id": "D5",
+        "domain_name": "Property & Economic Security",
+        "maqasid": "hifz_al_mal",
+        "score": 95.0,
+        "ci_lower": 95.0,
+        "ci_upper": 95.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833841",
+          "indicators": [
+            {
+              "indicator_id": "D5_gdp_per_capita_ppp",
+              "value": 95.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "world_bank",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D6",
+        "domain_name": "Justice & Rule of Law",
+        "maqasid": "adl",
+        "score": 78.0,
+        "ci_lower": 78.0,
+        "ci_upper": 78.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833851",
+          "indicators": [
+            {
+              "indicator_id": "D6_vdem_liberal_democracy",
+              "value": 78.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "v_dem",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D7",
+        "domain_name": "Human Dignity",
+        "maqasid": "karamah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D7_human_freedom_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D8",
+        "domain_name": "Democratic Consultation (Sh\u016br\u0101)",
+        "maqasid": "shura",
+        "score": 80.0,
+        "ci_lower": 80.0,
+        "ci_upper": 80.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833862",
+          "indicators": [
+            {
+              "indicator_id": "D8_electoral_democracy",
+              "value": 80.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "v_dem",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D9",
+        "domain_name": "Institutional Trust (Am\u0101nah)",
+        "maqasid": "amanah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D9_corruption_perception"
+          ]
+        }
+      },
+      {
+        "domain_id": "D10",
+        "domain_name": "Environmental / Intergenerational Harm",
+        "maqasid": "la_darar",
+        "score": 35.0,
+        "ci_lower": 35.0,
+        "ci_upper": 35.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833873",
+          "indicators": [
+            {
+              "indicator_id": "D10_co2_per_capita",
+              "value": 35.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "owid",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      }
+    ],
+    "red_line_events": [],
+    "provenance": {
+      "model_version": "0.1.0",
+      "method": "weighted_geometric_mean",
+      "formula": "(prod(D_i^w_i))^(1/sum(w_i))",
+      "weights": {
+        "D1": 1.0,
+        "D2": 1.0,
+        "D3": 1.0,
+        "D4": 1.0,
+        "D5": 1.0,
+        "D6": 1.0,
+        "D7": 1.0,
+        "D8": 1.0,
+        "D9": 1.0,
+        "D10": 1.0
+      },
+      "computed_at": "2026-08-31T18:38:09.833885",
+      "red_line_violations": [],
+      "red_line_cap_applied": null
+    },
+    "model_version": "0.1.0",
+    "framework": "maqasid",
+    "urf_note": "Local customs (including Halacha) are urf under Maqasid \u2014 not co-equal scores."
+  },
+  "DNK": {
+    "country_iso3": "DNK",
+    "country_name": "Denmark",
+    "overall_score": 86.4,
+    "raw_geometric_score": 86.4,
+    "red_line_cap_applied": null,
+    "ci_lower": null,
+    "ci_upper": null,
+    "global_rank": 1,
+    "ranking_robustness": 100.0,
+    "domain_scores": [
+      {
+        "domain_id": "D1",
+        "domain_name": "Freedom of Religion & Conscience",
+        "maqasid": "hifz_al_din",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D1_freedom_religion_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D2",
+        "domain_name": "Life & Physical Security",
+        "maqasid": "hifz_al_nafs",
+        "score": 92.0,
+        "ci_lower": 89.0,
+        "ci_upper": 95.0,
+        "indicator_count": 2,
+        "available_indicator_count": 2,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.833896",
+          "indicators": [
+            {
+              "indicator_id": "D2_homicide_rate",
+              "value": 95.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "unodc",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            },
+            {
+              "indicator_id": "D2_life_expectancy",
+              "value": 89.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "who",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D3",
+        "domain_name": "Intellect, Education & Information",
+        "maqasid": "hifz_al_aql",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D3_literacy_rate",
+            "D3_education_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D4",
+        "domain_name": "Family & Child Welfare",
+        "maqasid": "hifz_al_nasl",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D4_child_mortality"
+          ]
+        }
+      },
+      {
+        "domain_id": "D5",
+        "domain_name": "Property & Economic Security",
+        "maqasid": "hifz_al_mal",
+        "score": 85.0,
+        "ci_lower": 85.0,
+        "ci_upper": 85.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834316",
+          "indicators": [
+            {
+              "indicator_id": "D5_gini_index",
+              "value": 85.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "world_bank",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D6",
+        "domain_name": "Justice & Rule of Law",
+        "maqasid": "adl",
+        "score": 95.0,
+        "ci_lower": 95.0,
+        "ci_upper": 95.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834325",
+          "indicators": [
+            {
+              "indicator_id": "D6_rule_of_law",
+              "value": 95.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "wjp",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D7",
+        "domain_name": "Human Dignity",
+        "maqasid": "karamah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D7_human_freedom_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D8",
+        "domain_name": "Democratic Consultation (Sh\u016br\u0101)",
+        "maqasid": "shura",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D8_electoral_democracy"
+          ]
+        }
+      },
+      {
+        "domain_id": "D9",
+        "domain_name": "Institutional Trust (Am\u0101nah)",
+        "maqasid": "amanah",
+        "score": 90.0,
+        "ci_lower": 90.0,
+        "ci_upper": 90.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834340",
+          "indicators": [
+            {
+              "indicator_id": "D9_corruption_perception",
+              "value": 90.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "transparency_intl",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D10",
+        "domain_name": "Environmental / Intergenerational Harm",
+        "maqasid": "la_darar",
+        "score": 72.0,
+        "ci_lower": 72.0,
+        "ci_upper": 72.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834349",
+          "indicators": [
+            {
+              "indicator_id": "D10_renewable_energy_share",
+              "value": 72.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "world_bank",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      }
+    ],
+    "red_line_events": [],
+    "provenance": {
+      "model_version": "0.1.0",
+      "method": "weighted_geometric_mean",
+      "formula": "(prod(D_i^w_i))^(1/sum(w_i))",
+      "weights": {
+        "D1": 1.0,
+        "D2": 1.0,
+        "D3": 1.0,
+        "D4": 1.0,
+        "D5": 1.0,
+        "D6": 1.0,
+        "D7": 1.0,
+        "D8": 1.0,
+        "D9": 1.0,
+        "D10": 1.0
+      },
+      "computed_at": "2026-08-31T18:38:09.834359",
+      "red_line_violations": [],
+      "red_line_cap_applied": null
+    },
+    "model_version": "0.1.0",
+    "framework": "maqasid",
+    "urf_note": "Local customs (including Halacha) are urf under Maqasid \u2014 not co-equal scores."
+  },
+  "IND": {
+    "country_iso3": "IND",
+    "country_name": "India",
+    "overall_score": 51.49,
+    "raw_geometric_score": 51.49,
+    "red_line_cap_applied": null,
+    "ci_lower": null,
+    "ci_upper": null,
+    "global_rank": 5,
+    "ranking_robustness": 100.0,
+    "domain_scores": [
+      {
+        "domain_id": "D1",
+        "domain_name": "Freedom of Religion & Conscience",
+        "maqasid": "hifz_al_din",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D1_freedom_religion_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D2",
+        "domain_name": "Life & Physical Security",
+        "maqasid": "hifz_al_nafs",
+        "score": 55.0,
+        "ci_lower": 55.0,
+        "ci_upper": 55.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834369",
+          "indicators": [
+            {
+              "indicator_id": "D2_life_expectancy",
+              "value": 55.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "who",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D3",
+        "domain_name": "Intellect, Education & Information",
+        "maqasid": "hifz_al_aql",
+        "score": 60.0,
+        "ci_lower": 60.0,
+        "ci_upper": 60.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834378",
+          "indicators": [
+            {
+              "indicator_id": "D3_literacy_rate",
+              "value": 60.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "unesco",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D4",
+        "domain_name": "Family & Child Welfare",
+        "maqasid": "hifz_al_nasl",
+        "score": 45.0,
+        "ci_lower": 45.0,
+        "ci_upper": 45.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834386",
+          "indicators": [
+            {
+              "indicator_id": "D4_child_mortality",
+              "value": 45.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "unicef",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D5",
+        "domain_name": "Property & Economic Security",
+        "maqasid": "hifz_al_mal",
+        "score": 42.0,
+        "ci_lower": 42.0,
+        "ci_upper": 42.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834395",
+          "indicators": [
+            {
+              "indicator_id": "D5_gdp_per_capita_ppp",
+              "value": 42.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "world_bank",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D6",
+        "domain_name": "Justice & Rule of Law",
+        "maqasid": "adl",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D6_rule_of_law",
+            "D6_vdem_liberal_democracy"
+          ]
+        }
+      },
+      {
+        "domain_id": "D7",
+        "domain_name": "Human Dignity",
+        "maqasid": "karamah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D7_human_freedom_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D8",
+        "domain_name": "Democratic Consultation (Sh\u016br\u0101)",
+        "maqasid": "shura",
+        "score": 58.0,
+        "ci_lower": 58.0,
+        "ci_upper": 58.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834410",
+          "indicators": [
+            {
+              "indicator_id": "D8_electoral_democracy",
+              "value": 58.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "v_dem",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D9",
+        "domain_name": "Institutional Trust (Am\u0101nah)",
+        "maqasid": "amanah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D9_corruption_perception"
+          ]
+        }
+      },
+      {
+        "domain_id": "D10",
+        "domain_name": "Environmental / Intergenerational Harm",
+        "maqasid": "la_darar",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D10_co2_per_capita",
+            "D10_renewable_energy_share"
+          ]
+        }
+      }
+    ],
+    "red_line_events": [],
+    "provenance": {
+      "model_version": "0.1.0",
+      "method": "weighted_geometric_mean",
+      "formula": "(prod(D_i^w_i))^(1/sum(w_i))",
+      "weights": {
+        "D1": 1.0,
+        "D2": 1.0,
+        "D3": 1.0,
+        "D4": 1.0,
+        "D5": 1.0,
+        "D6": 1.0,
+        "D7": 1.0,
+        "D8": 1.0,
+        "D9": 1.0,
+        "D10": 1.0
+      },
+      "computed_at": "2026-08-31T18:38:09.834428",
+      "red_line_violations": [],
+      "red_line_cap_applied": null
+    },
+    "model_version": "0.1.0",
+    "framework": "maqasid",
+    "urf_note": "Local customs (including Halacha) are urf under Maqasid \u2014 not co-equal scores."
+  },
+  "SGP": {
+    "country_iso3": "SGP",
+    "country_name": "Singapore",
+    "overall_score": 78.13,
+    "raw_geometric_score": 78.13,
+    "red_line_cap_applied": null,
+    "ci_lower": null,
+    "ci_upper": null,
+    "global_rank": 3,
+    "ranking_robustness": 100.0,
+    "domain_scores": [
+      {
+        "domain_id": "D1",
+        "domain_name": "Freedom of Religion & Conscience",
+        "maqasid": "hifz_al_din",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D1_freedom_religion_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D2",
+        "domain_name": "Life & Physical Security",
+        "maqasid": "hifz_al_nafs",
+        "score": 96.0,
+        "ci_lower": 94.0,
+        "ci_upper": 98.0,
+        "indicator_count": 2,
+        "available_indicator_count": 2,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834437",
+          "indicators": [
+            {
+              "indicator_id": "D2_homicide_rate",
+              "value": 98.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "unodc",
+              "observation_date": "2022-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            },
+            {
+              "indicator_id": "D2_life_expectancy",
+              "value": 94.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "who",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D3",
+        "domain_name": "Intellect, Education & Information",
+        "maqasid": "hifz_al_aql",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D3_literacy_rate",
+            "D3_education_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D4",
+        "domain_name": "Family & Child Welfare",
+        "maqasid": "hifz_al_nasl",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D4_child_mortality"
+          ]
+        }
+      },
+      {
+        "domain_id": "D5",
+        "domain_name": "Property & Economic Security",
+        "maqasid": "hifz_al_mal",
+        "score": 98.0,
+        "ci_lower": 98.0,
+        "ci_upper": 98.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834877",
+          "indicators": [
+            {
+              "indicator_id": "D5_gdp_per_capita_ppp",
+              "value": 98.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "world_bank",
+              "observation_date": "2023-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D6",
+        "domain_name": "Justice & Rule of Law",
+        "maqasid": "adl",
+        "score": 88.0,
+        "ci_lower": 88.0,
+        "ci_upper": 88.0,
+        "indicator_count": 2,
+        "available_indicator_count": 1,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834887",
+          "indicators": [
+            {
+              "indicator_id": "D6_rule_of_law",
+              "value": 88.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "wjp",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D7",
+        "domain_name": "Human Dignity",
+        "maqasid": "karamah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D7_human_freedom_index"
+          ]
+        }
+      },
+      {
+        "domain_id": "D8",
+        "domain_name": "Democratic Consultation (Sh\u016br\u0101)",
+        "maqasid": "shura",
+        "score": 45.0,
+        "ci_lower": 45.0,
+        "ci_upper": 45.0,
+        "indicator_count": 1,
+        "available_indicator_count": 1,
+        "is_complete": true,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "computed_at": "2026-08-31T18:38:09.834900",
+          "indicators": [
+            {
+              "indicator_id": "D8_electoral_democracy",
+              "value": 45.0,
+              "weight": 1.0,
+              "source_reliability": 0.8,
+              "source_id": "v_dem",
+              "observation_date": "2024-01-01",
+              "verified": false,
+              "unavailable_reason": null
+            }
+          ]
+        }
+      },
+      {
+        "domain_id": "D9",
+        "domain_name": "Institutional Trust (Am\u0101nah)",
+        "maqasid": "amanah",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 1,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D9_corruption_perception"
+          ]
+        }
+      },
+      {
+        "domain_id": "D10",
+        "domain_name": "Environmental / Intergenerational Harm",
+        "maqasid": "la_darar",
+        "score": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "indicator_count": 2,
+        "available_indicator_count": 0,
+        "is_complete": false,
+        "provenance": {
+          "model_version": "0.1.0",
+          "method": "reliability_weighted_mean",
+          "status": "insufficient_data",
+          "indicators": [
+            "D10_co2_per_capita",
+            "D10_renewable_energy_share"
+          ]
+        }
+      }
+    ],
+    "red_line_events": [],
+    "provenance": {
+      "model_version": "0.1.0",
+      "method": "weighted_geometric_mean",
+      "formula": "(prod(D_i^w_i))^(1/sum(w_i))",
+      "weights": {
+        "D1": 1.0,
+        "D2": 1.0,
+        "D3": 1.0,
+        "D4": 1.0,
+        "D5": 1.0,
+        "D6": 1.0,
+        "D7": 1.0,
+        "D8": 1.0,
+        "D9": 1.0,
+        "D10": 1.0
+      },
+      "computed_at": "2026-08-31T18:38:09.834918",
+      "red_line_violations": [],
+      "red_line_cap_applied": null
+    },
+    "model_version": "0.1.0",
+    "framework": "maqasid",
+    "urf_note": "Local customs (including Halacha) are urf under Maqasid \u2014 not co-equal scores."
+  }
+}

@@ -1,47 +1,41 @@
-# Scoring Methodology
+# Scoring Methodology — Maqasid-primary
+
+## Global objective function
+
+OSD scores countries and policies **only against Maqasid domains**. Local customs (ʿurf), including Halacha, do not supply an alternate score; they annotate local expression under Maqasid.
 
 ## Indicator normalisation
 
-Raw indicators are transformed to a 0–100 scale using methods declared per indicator:
-
-- `min_max`: linear scaling with direction adjustment
-- `percentile`: rank within reference distribution
-- `z_score`: standardised distance from mean
-- `binary`: 0 or 100 for presence/absence
-
-Unavailable values remain `null` with explicit `unavailable_reason`.
+Raw indicators → 0–100. Unavailable values stay `null` with `unavailable_reason`.
 
 ## Domain scores
-
-For each domain *d*, with available indicators *i*:
 
 ```
 D_d = Σ(v_i × w_i × r_i) / Σ(w_i × r_i)
 ```
 
-Where:
-- `v_i` = normalised indicator value
-- `w_i` = indicator weight
-- `r_i` = source reliability weight
+Each domain `D_d` is a Maqasid objective (D1–D10).
 
 ## Overall OSD score
 
-Weighted geometric mean across domains:
+Weighted geometric mean (non-compensatory):
 
 ```
 OSD = (Π D_i^w_i)^(1/Σw_i)
 ```
 
-This prevents compensating catastrophic failures in one domain with excellence in another.
+## Government expenditure
 
-## Uncertainty
+Every expenditure must declare Maqasid objective(s). Evaluation:
 
-Bootstrap resampling (default 500 iterations) produces 95% confidence intervals per domain.
+```
+spend → Maqasid aim → target → observed outcome → audit
+```
 
-## Red-line caps
+## ʿUrf
 
-Verified constitutional violations cap overall score regardless of other performance. Unverified allegations do not trigger caps.
+Country-tunable. Validated by `osd.urf.validator`. Contradiction with Maqasid → rejected.
 
-## Policy scoring
+## Uncertainty & red lines
 
-Ten components computed separately before optional effectiveness aggregation. Unverified policies return null components.
+Bootstrap CIs. Verified red-line violations cap overall score (Maqasid non-compensatory constraints).

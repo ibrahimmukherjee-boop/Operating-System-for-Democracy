@@ -1,0 +1,123 @@
+[
+  {
+    "policy_id": "GBR-HOUSING-2026-001",
+    "country": "GBR",
+    "title": "National Homelessness Reduction Programme (Illustrative)",
+    "status": "active",
+    "start_date": "2026-04-01",
+    "end_date": "2031-03-31",
+    "government_department": "Ministry of Housing, Communities and Local Government",
+    "policy_area": "housing",
+    "legal_basis": [
+      "Housing Act 1996",
+      "Homelessness Reduction Act 2017"
+    ],
+    "constitutional_constraints": [
+      "Human Rights Act 1998 \u2014 Article 8 (home)"
+    ],
+    "maqasid_domains": [
+      "hifz_al_nafs",
+      "hifz_al_mal",
+      "karamah",
+      "hifz_al_nasl",
+      "adl",
+      "hifz_al_aql"
+    ],
+    "urf": [],
+    "public_value_domains": [
+      "D2",
+      "D3",
+      "D4",
+      "D5",
+      "D6",
+      "D7"
+    ],
+    "stated_objectives": [
+      "Reduce involuntary homelessness while preserving safety, dignity, fiscal sustainability and local community stability",
+      "Life (hifz al-nafs): reduce deaths, rough sleeping and exposure-related illness",
+      "Property (hifz al-mal): increase access to stable housing without arbitrarily infringing property rights",
+      "Intellect (hifz al-aql): improve access to addiction and mental-health services",
+      "Family (hifz al-nasl): reduce children living in temporary accommodation",
+      "Dignity (karamah): minimise degrading or unsafe living conditions",
+      "Justice (adl): ensure eligibility is applied consistently"
+    ],
+    "target_population": [
+      "Rough sleepers",
+      "Families in temporary accommodation",
+      "At-risk households"
+    ],
+    "budget": {
+      "amount": 4000000000,
+      "currency": "GBP",
+      "period_years": 5,
+      "notes": "Every pound must map to declared Maqasid objectives",
+      "maqasid_allocation": {
+        "hifz_al_nafs": 0.35,
+        "hifz_al_nasl": 0.2,
+        "karamah": 0.2,
+        "hifz_al_mal": 0.15,
+        "hifz_al_aql": 0.05,
+        "adl": 0.05
+      }
+    },
+    "baseline": {
+      "rough_sleeping_count": {
+        "value": null,
+        "unavailable_reason": "Baseline pending official statistical release"
+      },
+      "families_temp_accommodation": {
+        "value": null,
+        "unavailable_reason": "Baseline pending official statistical release"
+      }
+    },
+    "targets": {
+      "rough_sleeping_reduction": {
+        "value": 0.6,
+        "direction": "decrease",
+        "unit": "proportion",
+        "deadline": "2031-03-31",
+        "maqasid": "hifz_al_nafs"
+      },
+      "families_temp_accommodation_reduction": {
+        "value": 0.4,
+        "direction": "decrease",
+        "unit": "proportion",
+        "maqasid": "hifz_al_nasl"
+      },
+      "repeat_homelessness_24m": {
+        "value": 0.15,
+        "direction": "below",
+        "unit": "proportion",
+        "maqasid": "hifz_al_mal"
+      },
+      "preventable_deaths_reduction": {
+        "value": 0.5,
+        "direction": "decrease",
+        "unit": "proportion",
+        "maqasid": "hifz_al_nafs"
+      }
+    },
+    "observed_outcomes": {},
+    "review_status": "unverified",
+    "ai_generated": true,
+    "sources": [
+      "gov_uk_housing"
+    ],
+    "framework": "maqasid",
+    "score_components": {
+      "need": null,
+      "evidence_quality": null,
+      "expected_impact": null,
+      "cost_effectiveness": null,
+      "maqasid_compatibility": null,
+      "distributional_fairness": null,
+      "observed_impact": null,
+      "uncertainty": null,
+      "implementation_quality": null,
+      "long_term_sustainability": null
+    },
+    "effectiveness_score": null,
+    "country_name": "United Kingdom",
+    "country_iso3": "GBR"
+  }
+]

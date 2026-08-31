@@ -179,7 +179,7 @@ def compute_policy_components(
         "evidence_quality": None,
         "expected_impact": None,
         "cost_effectiveness": None,
-        "rights_compatibility": None,
+        "maqasid_compatibility": None,
         "distributional_fairness": None,
         "observed_impact": None,
         "uncertainty": None,
@@ -188,8 +188,16 @@ def compute_policy_components(
     }
 
     review = policy_data.get("review_status", "unverified")
+    maqasid = policy_data.get("maqasid_domains") or []
+
+    # Expenditure without Maqasid mapping is incomplete — no silent pass.
+    budget = policy_data.get("budget") or {}
+    if budget.get("amount") and not maqasid:
+        components["maqasid_compatibility"] = 0.0
+    elif maqasid:
+        components["maqasid_compatibility"] = 100.0 if review == "verified" else None
+
     if review != "verified":
-        components["evidence_quality"] = None
         return components
 
     targets = policy_data.get("targets") or {}
@@ -225,7 +233,6 @@ def compute_policy_components(
     if sources:
         components["evidence_quality"] = 70.0 if len(sources) >= 2 else 50.0
 
-    budget = policy_data.get("budget") or {}
     if budget.get("amount") and components["observed_impact"] is not None:
         components["cost_effectiveness"] = components["observed_impact"]
 

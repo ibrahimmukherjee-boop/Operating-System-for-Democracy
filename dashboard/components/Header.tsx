@@ -11,12 +11,13 @@ export function Header() {
             </h1>
           </Link>
           <p className="text-sm text-gray-400 mt-1">
-            Policy in. Evidence out. Power audited.
+            Maqasid in. Evidence out. Power audited.
           </p>
         </div>
         <nav className="flex gap-4 text-sm">
           <Link href="/">Global Rankings</Link>
-          <Link href="/weighting">Weighting Lab</Link>
+          <Link href="/weighting/">Weighting Lab</Link>
+          <Link href="/framework/">Framework</Link>
         </nav>
       </div>
     </header>

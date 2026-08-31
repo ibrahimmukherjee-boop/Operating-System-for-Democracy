@@ -1,1 +1,6 @@
-rank,iso3,country_name,overall_score,ci_lower,ci_upper,model_version
+rank,iso3,country_name,overall_score,model_version,framework
+1,DNK,Denmark,86.4,0.1.0,maqasid
+2,GBR,United Kingdom,81.75,0.1.0,maqasid
+3,SGP,Singapore,78.13,0.1.0,maqasid
+4,USA,United States,66.99,0.1.0,maqasid
+5,IND,India,51.49,0.1.0,maqasid

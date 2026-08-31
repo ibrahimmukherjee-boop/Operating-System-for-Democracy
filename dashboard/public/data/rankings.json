@@ -1,0 +1,59 @@
+{
+  "rankings": [
+    {
+      "rank": 1,
+      "country_iso3": "DNK",
+      "country_name": "Denmark",
+      "overall_score": 86.4,
+      "ci_lower": null,
+      "ci_upper": null,
+      "trend": null,
+      "red_flags": 0
+    },
+    {
+      "rank": 2,
+      "country_iso3": "GBR",
+      "country_name": "United Kingdom",
+      "overall_score": 81.75,
+      "ci_lower": null,
+      "ci_upper": null,
+      "trend": null,
+      "red_flags": 0
+    },
+    {
+      "rank": 3,
+      "country_iso3": "SGP",
+      "country_name": "Singapore",
+      "overall_score": 78.13,
+      "ci_lower": null,
+      "ci_upper": null,
+      "trend": null,
+      "red_flags": 0
+    },
+    {
+      "rank": 4,
+      "country_iso3": "USA",
+      "country_name": "United States",
+      "overall_score": 66.99,
+      "ci_lower": null,
+      "ci_upper": null,
+      "trend": null,
+      "red_flags": 0
+    },
+    {
+      "rank": 5,
+      "country_iso3": "IND",
+      "country_name": "India",
+      "overall_score": 51.49,
+      "ci_lower": null,
+      "ci_upper": null,
+      "trend": null,
+      "red_flags": 0
+    }
+  ],
+  "model_version": "0.1.0",
+  "weight_profile": "default",
+  "framework": "maqasid",
+  "computed_at": "2026-08-31T18:38:09.837669+00:00",
+  "total_countries": 5
+}

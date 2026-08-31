@@ -27,10 +27,23 @@
     "legal_basis": { "type": "array", "items": { "type": "string" } },
     "constitutional_constraints": { "type": "array", "items": { "type": "string" } },
     "maqasid_domains": { "type": "array", "items": { "type": "string" } },
-    "halakha_parallels": { "type": "array", "items": { "type": "string" } },
+    "halakha_parallels": { "type": "array", "items": { "type": "string" }, "description": "Deprecated — use urf" },
+    "urf": {
+      "type": "array",
+      "description": "Local customs under Maqasid (Halacha is urf, not co-equal scoring)",
+      "items": {
+        "type": "object",
+        "required": ["tradition", "principle", "layer"],
+        "properties": {
+          "tradition": { "type": "string" },
+          "principle": { "type": "string" },
+          "layer": { "type": "string", "const": "urf" }
+        }
+      }
+    },
     "public_value_domains": {
       "type": "array",
-      "items": { "type": "string", "pattern": "^D[1-9]|D10$" }
+      "items": { "type": "string", "pattern": "^D([1-9]|10)$" }
     },
     "stated_objectives": { "type": "array", "items": { "type": "string" } },
     "target_population": { "type": "array", "items": { "type": "string" } },
@@ -41,7 +54,8 @@
         "amount": { "type": ["number", "null"] },
         "currency": { "type": ["string", "null"] },
         "period_years": { "type": ["number", "null"] },
-        "notes": { "type": ["string", "null"] }
+        "notes": { "type": ["string", "null"] },
+        "maqasid_allocation": { "type": "object" }
       }
     },
     "baseline": { "type": "object" },

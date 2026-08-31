@@ -25,8 +25,13 @@ data/staging/*
 !data/staging/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/*.json
 *.duckdb
 *.duckdb.wal
+
+# Dashboard build
+dashboard/out/
+dashboard/.next/
 
 # IDE
 .idea/

@@ -1,0 +1,144 @@
+{
+  "model_version": "0.1.0",
+  "framework": "maqasid",
+  "tagline": "Policy in. Evidence out. Power audited.",
+  "generated_at": "2026-08-31T18:38:09.837669+00:00",
+  "pilot_countries": [
+    "GBR",
+    "USA",
+    "DNK",
+    "IND",
+    "SGP"
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Freedom of Religion & Conscience",
+      "maqasid": "hifz_al_din",
+      "order": 1
+    },
+    {
+      "id": "D2",
+      "name": "Life & Physical Security",
+      "maqasid": "hifz_al_nafs",
+      "order": 2
+    },
+    {
+      "id": "D3",
+      "name": "Intellect, Education & Information",
+      "maqasid": "hifz_al_aql",
+      "order": 3
+    },
+    {
+      "id": "D4",
+      "name": "Family & Child Welfare",
+      "maqasid": "hifz_al_nasl",
+      "order": 4
+    },
+    {
+      "id": "D5",
+      "name": "Property & Economic Security",
+      "maqasid": "hifz_al_mal",
+      "order": 5
+    },
+    {
+      "id": "D6",
+      "name": "Justice & Rule of Law",
+      "maqasid": "adl",
+      "order": 6
+    },
+    {
+      "id": "D7",
+      "name": "Human Dignity",
+      "maqasid": "karamah",
+      "order": 7
+    },
+    {
+      "id": "D8",
+      "name": "Democratic Consultation (Sh\u016br\u0101)",
+      "maqasid": "shura",
+      "order": 8
+    },
+    {
+      "id": "D9",
+      "name": "Institutional Trust (Am\u0101nah)",
+      "maqasid": "amanah",
+      "order": 9
+    },
+    {
+      "id": "D10",
+      "name": "Environmental / Intergenerational Harm",
+      "maqasid": "la_darar",
+      "order": 10
+    }
+  ],
+  "maqasid_principles": [
+    {
+      "code": "hifz_al_din",
+      "name": "Preservation of religion/conscience",
+      "domain_id": "D1"
+    },
+    {
+      "code": "hifz_al_nafs",
+      "name": "Preservation of life",
+      "domain_id": "D2"
+    },
+    {
+      "code": "hifz_al_aql",
+      "name": "Preservation of intellect",
+      "domain_id": "D3"
+    },
+    {
+      "code": "hifz_al_nasl",
+      "name": "Preservation of lineage/family",
+      "domain_id": "D4"
+    },
+    {
+      "code": "hifz_al_mal",
+      "name": "Preservation of property",
+      "domain_id": "D5"
+    },
+    {
+      "code": "adl",
+      "name": "Justice",
+      "domain_id": "D6"
+    },
+    {
+      "code": "karamah",
+      "name": "Human dignity",
+      "domain_id": "D7"
+    },
+    {
+      "code": "shura",
+      "name": "Consultation/participation",
+      "domain_id": "D8"
+    },
+    {
+      "code": "amanah",
+      "name": "Trustworthiness/integrity",
+      "domain_id": "D9"
+    },
+    {
+      "code": "la_darar",
+      "name": "Non-harm constraint",
+      "domain_id": "D10"
+    }
+  ],
+  "default_weights": {
+    "D1": 1.0,
+    "D2": 1.0,
+    "D3": 1.0,
+    "D4": 1.0,
+    "D5": 1.0,
+    "D6": 1.0,
+    "D7": 1.0,
+    "D8": 1.0,
+    "D9": 1.0,
+    "D10": 1.0
+  },
+  "urf": {
+    "definition": "Local customs tunable per country under Maqasid; must not contradict Maqasid.",
+    "halakha": "Treated as urf, not a co-equal global scoring system."
+  },
+  "expenditure_rule": "Every government expenditure must map to one or more Maqasid objectives."
+}

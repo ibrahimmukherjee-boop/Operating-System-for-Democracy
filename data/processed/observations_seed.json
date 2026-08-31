@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "note": "Observations with verified=false are structural placeholders pending live ingestion. Never displayed without provenance.",
+    "model_version": "0.1.0"
+  },
+  "observations": [
+    {"country_iso3": "GBR", "indicator_id": "D2_life_expectancy", "raw_value": 81.3, "normalised_value": 88.5, "observation_date": "2023-01-01", "source_id": "who", "verified": false, "unavailable_reason": null, "is_available": true},
+    {"country_iso3": "GBR", "indicator_id": "D2_homicide_rate", "raw_value": 1.12, "normalised_value": 92.0, "observation_date": "2022-01-01", "source_id": "unodc", "verified": false, "is_available": true},
+    {"country_iso3": "GBR", "indicator_id": "D6_rule_of_law", "raw_value": 0.79, "normalised_value": 82.0, "observation_date": "2024-01-01", "source_id": "wjp", "verified": false, "is_available": true},
+    {"country_iso3": "GBR", "indicator_id": "D8_electoral_democracy", "raw_value": 0.82, "normalised_value": 85.0, "observation_date": "2024-01-01", "source_id": "v_dem", "verified": false, "is_available": true},
+    {"country_iso3": "GBR", "indicator_id": "D9_corruption_perception", "raw_value": 71, "normalised_value": 71.0, "observation_date": "2024-01-01", "source_id": "transparency_intl", "verified": false, "is_available": true},
+    {"country_iso3": "GBR", "indicator_id": "D1_freedom_religion_index", "raw_value": null, "normalised_value": null, "observation_date": "2024-01-01", "source_id": "freedom_house", "verified": false, "is_available": false, "unavailable_reason": "Pending ingestion from Freedom House dataset"},
+    {"country_iso3": "USA", "indicator_id": "D2_life_expectancy", "raw_value": 78.4, "normalised_value": 75.0, "observation_date": "2023-01-01", "source_id": "who", "verified": false, "is_available": true},
+    {"country_iso3": "USA", "indicator_id": "D2_homicide_rate", "raw_value": 6.3, "normalised_value": 55.0, "observation_date": "2022-01-01", "source_id": "unodc", "verified": false, "is_available": true},
+    {"country_iso3": "USA", "indicator_id": "D5_gdp_per_capita_ppp", "raw_value": 76330, "normalised_value": 95.0, "observation_date": "2023-01-01", "source_id": "world_bank", "verified": false, "is_available": true},
+    {"country_iso3": "USA", "indicator_id": "D6_vdem_liberal_democracy", "raw_value": 0.75, "normalised_value": 78.0, "observation_date": "2024-01-01", "source_id": "v_dem", "verified": false, "is_available": true},
+    {"country_iso3": "USA", "indicator_id": "D8_electoral_democracy", "raw_value": 0.78, "normalised_value": 80.0, "observation_date": "2024-01-01", "source_id": "v_dem", "verified": false, "is_available": true},
+    {"country_iso3": "USA", "indicator_id": "D10_co2_per_capita", "raw_value": 14.7, "normalised_value": 35.0, "observation_date": "2022-01-01", "source_id": "owid", "verified": false, "is_available": true},
+    {"country_iso3": "DNK", "indicator_id": "D2_life_expectancy", "raw_value": 81.4, "normalised_value": 89.0, "observation_date": "2023-01-01", "source_id": "who", "verified": false, "is_available": true},
+    {"country_iso3": "DNK", "indicator_id": "D2_homicide_rate", "raw_value": 0.87, "normalised_value": 95.0, "observation_date": "2022-01-01", "source_id": "unodc", "verified": false, "is_available": true},
+    {"country_iso3": "DNK", "indicator_id": "D5_gini_index", "raw_value": 28.2, "normalised_value": 85.0, "observation_date": "2022-01-01", "source_id": "world_bank", "verified": false, "is_available": true},
+    {"country_iso3": "DNK", "indicator_id": "D6_rule_of_law", "raw_value": 0.90, "normalised_value": 95.0, "observation_date": "2024-01-01", "source_id": "wjp", "verified": false, "is_available": true},
+    {"country_iso3": "DNK", "indicator_id": "D9_corruption_perception", "raw_value": 90, "normalised_value": 90.0, "observation_date": "2024-01-01", "source_id": "transparency_intl", "verified": false, "is_available": true},
+    {"country_iso3": "DNK", "indicator_id": "D10_renewable_energy_share", "raw_value": 38.0, "normalised_value": 72.0, "observation_date": "2022-01-01", "source_id": "world_bank", "verified": false, "is_available": true},
+    {"country_iso3": "IND", "indicator_id": "D2_life_expectancy", "raw_value": 70.4, "normalised_value": 55.0, "observation_date": "2023-01-01", "source_id": "who", "verified": false, "is_available": true},
+    {"country_iso3": "IND", "indicator_id": "D3_literacy_rate", "raw_value": 74.4, "normalised_value": 60.0, "observation_date": "2022-01-01", "source_id": "unesco", "verified": false, "is_available": true},
+    {"country_iso3": "IND", "indicator_id": "D4_child_mortality", "raw_value": 31.8, "normalised_value": 45.0, "observation_date": "2022-01-01", "source_id": "unicef", "verified": false, "is_available": true},
+    {"country_iso3": "IND", "indicator_id": "D5_gdp_per_capita_ppp", "raw_value": 8900, "normalised_value": 42.0, "observation_date": "2023-01-01", "source_id": "world_bank", "verified": false, "is_available": true},
+    {"country_iso3": "IND", "indicator_id": "D8_electoral_democracy", "raw_value": 0.55, "normalised_value": 58.0, "observation_date": "2024-01-01", "source_id": "v_dem", "verified": false, "is_available": true},
+    {"country_iso3": "IND", "indicator_id": "D1_freedom_religion_index", "raw_value": null, "normalised_value": null, "observation_date": "2024-01-01", "source_id": "freedom_house", "verified": false, "is_available": false, "unavailable_reason": "Pending ingestion from Freedom House dataset"},
+    {"country_iso3": "SGP", "indicator_id": "D2_life_expectancy", "raw_value": 83.6, "normalised_value": 94.0, "observation_date": "2023-01-01", "source_id": "who", "verified": false, "is_available": true},
+    {"country_iso3": "SGP", "indicator_id": "D2_homicide_rate", "raw_value": 0.16, "normalised_value": 98.0, "observation_date": "2022-01-01", "source_id": "unodc", "verified": false, "is_available": true},
+    {"country_iso3": "SGP", "indicator_id": "D5_gdp_per_capita_ppp", "raw_value": 133740, "normalised_value": 98.0, "observation_date": "2023-01-01", "source_id": "world_bank", "verified": false, "is_available": true},
+    {"country_iso3": "SGP", "indicator_id": "D6_rule_of_law", "raw_value": 0.83, "normalised_value": 88.0, "observation_date": "2024-01-01", "source_id": "wjp", "verified": false, "is_available": true},
+    {"country_iso3": "SGP", "indicator_id": "D8_electoral_democracy", "raw_value": 0.42, "normalised_value": 45.0, "observation_date": "2024-01-01", "source_id": "v_dem", "verified": false, "is_available": true},
+    {"country_iso3": "SGP", "indicator_id": "D7_human_freedom_index", "raw_value": null, "normalised_value": null, "observation_date": "2024-01-01", "source_id": "cato", "verified": false, "is_available": false, "unavailable_reason": "Pending ingestion from Cato Human Freedom Index"}
+  ]
+}

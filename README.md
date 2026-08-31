@@ -1,123 +1,74 @@
 # Operating System for a Democracy
 
-**Policy in. Evidence out. Power audited.**
+**Maqasid in. Evidence out. Power audited.**
 
-Operating System for a Democracy (OSD) is an open-source public-policy intelligence platform that models countries using a common hierarchy of societal objectives, maps government policies to those objectives, measures observed outcomes, compares promises with results, and ranks countries transparently—with a complete audit trail for every score.
+An open-source public-policy intelligence platform that scores governments, policies, and **every public expenditure** against **Maqasid** — the global objective function.
 
-## Mission
+Local customs (**ʿurf**), including **Halacha**, can be tuned per country **only where they serve Maqasid and do not contradict it**. Halacha is not a co-equal scoring system.
 
-Create a transparent, auditable data-science framework for evaluating governments, countries, and public policies against explicit societal objectives.
+## Live site (GitHub Pages)
 
-## Three layers
+After you click **Create repo** on this project and enable GitHub Pages (Settings → Pages → Source: GitHub Actions), the site deploys automatically from `.github/workflows/pages.yml`.
+
+Expected URL pattern:
+
+`https://<your-github-username>.github.io/<repo-name>/`
+
+## Framework hierarchy
 
 ```
-Country State → Policy Engine → Outcome Evaluation
+Maqasid (global objective function)
+        ↓
+ʿUrf — local customs (Halacha, constitutional practice, …)
+        ↓
+must not contradict Maqasid
+        ↓
+Government expenditure → Maqasid aim → targets → observed outcomes → audit
 ```
 
-> Given what a country claims to value constitutionally, what policies is it implementing, and does the evidence show those policies are improving the things society is supposed to preserve?
+### Ten Maqasid domains
 
-## Ten domains
-
-| ID | Domain |
-|----|--------|
-| D1 | Freedom of Religion & Conscience |
-| D2 | Life & Physical Security |
-| D3 | Intellect, Education & Information |
-| D4 | Family & Child Welfare |
-| D5 | Property & Economic Security |
-| D6 | Justice & Rule of Law |
-| D7 | Human Dignity |
-| D8 | Democratic Consultation |
-| D9 | Institutional Trust |
-| D10 | Environmental / Intergenerational Harm |
-
-The framework draws comparatively on Maqasid al-Sharia, Halakhic value hierarchies, liberal constitutionalism, human rights, and development economics—**without treating these traditions as identical**.
+| ID | Domain | Maqasid |
+|----|--------|---------|
+| D1 | Freedom of Religion & Conscience | hifz_al_din |
+| D2 | Life & Physical Security | hifz_al_nafs |
+| D3 | Intellect, Education & Information | hifz_al_aql |
+| D4 | Family & Child Welfare | hifz_al_nasl |
+| D5 | Property & Economic Security | hifz_al_mal |
+| D6 | Justice & Rule of Law | adl |
+| D7 | Human Dignity | karamah |
+| D8 | Democratic Consultation | shura |
+| D9 | Institutional Trust | amanah |
+| D10 | Environmental / Intergenerational Harm | la_darar |
 
 ## Pilot countries
 
-- United Kingdom (GBR)
-- United States (USA)
-- Denmark (DNK)
-- India (IND)
-- Singapore (SGP)
+United Kingdom · United States · Denmark · India · Singapore
 
-After the pipeline works for these five, it generalises to all 195 sovereign states.
-
-## Quick start
-
-### With Docker
-
-```bash
-docker compose up --build
-```
-
-- API: http://localhost:8742
-- Dashboard: http://localhost:4317
-- API docs: http://localhost:8742/docs
-
-### Local development
-
-```bash
-# Backend
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-cp .env.example .env
-docker compose up -d postgres
-python -m osd.cli seed
-uvicorn api.main:app --reload --port 8742
-
-# Frontend
-cd dashboard && npm install && npm run dev
-```
-
-### Run tests
-
-```bash
-pytest
-```
-
-## Scoring methodology
-
-1. Normalise indicators to 0–100
-2. Calculate domain scores (weighted by source reliability)
-3. Overall OSD = weighted geometric mean of domain scores
-4. Confidence intervals via bootstrap / uncertainty engine
-5. Red-line caps for catastrophic rights violations (non-compensatory)
-
-Every number traces to: source URL, dataset, observation date, transformation, normalisation method, weight, model version.
-
-## What would this look like in practice?
+## What this looks like in practice
 
 Take **homelessness**.
 
 A government announces a five-year programme costing £4 billion. Under the present system, political debate quickly becomes ideological: one side calls it compassionate; another calls it wasteful.
 
-Under a data-science democracy, the policy begins with an explicit objective:
+Under a Maqasid audit, the policy begins with an explicit objective:
 
 **Reduce involuntary homelessness while preserving safety, dignity, fiscal sustainability and local community stability.**
 
-The policy is then mapped against the constitutional and Maqāṣid framework:
+Mapped to Maqasid:
 
-**Life:** reduce deaths, rough sleeping and exposure-related illness.
-**Property:** increase access to stable housing without arbitrarily infringing property rights.
-**Intellect:** improve access to addiction and mental-health services.
-**Family:** reduce children living in temporary accommodation.
-**Dignity:** minimise degrading or unsafe living conditions.
-**Justice:** ensure eligibility is applied consistently.
+* **Life (ḥifẓ al-nafs):** reduce deaths, rough sleeping and exposure-related illness.
+* **Property (ḥifẓ al-māl):** increase access to stable housing without arbitrarily infringing property rights.
+* **Intellect (ḥifẓ al-ʿaql):** improve access to addiction and mental-health services.
+* **Family (ḥifẓ al-nasl):** reduce children living in temporary accommodation.
+* **Dignity (karāmah):** minimise degrading or unsafe living conditions.
+* **Justice (ʿadl):** ensure eligibility is applied consistently.
 
-Before implementation, government publishes measurable targets:
+Local customs (ʿurf) — e.g. Halachic parallels such as *pikuach nefesh* or *kavod habriyot* — may annotate the policy **under** these Maqasid aims. They do not replace them.
 
-* rough sleeping: −60% within five years;
-* families in temporary accommodation: −40%;
-* repeat homelessness within 24 months: below 15%;
-* cost per sustainably housed person: published annually;
-* preventable deaths among homeless people: −50%.
+Before implementation, government publishes measurable targets, baseline, cost, assumptions and confidence intervals. Every year, outcomes are compared with predictions.
 
-It also publishes the baseline, projected cost, assumptions and confidence intervals.
-
-Every year, actual outcomes are compared with predictions.
-
-If £2 billion has been spent but homelessness has increased, ministers cannot simply announce that the programme was “successful in other ways.” The objective function was declared in advance.
+If £2 billion has been spent but homelessness has increased, ministers cannot announce that the programme was “successful in other ways.” The objective function was declared in advance.
 
 Change the programme. Explain the failure. Or stop funding it.
 
@@ -125,25 +76,34 @@ Change the programme. Explain the failure. Or stop funding it.
 
 ---
 
-## Repository structure
+## Open-source project
 
+**Operating System for a Democracy**
+
+Three layers: **Country State → Policy Engine → Outcome Evaluation**
+
+> Given Maqasid objectives, what policies is a country implementing, and does the evidence show those policies are improving what society is supposed to preserve?
+
+## Static site (no local server required)
+
+The public GitHub Pages site is fully static:
+
+```bash
+pip install -e .
+python -m osd.cli export-static   # writes dashboard/public/data/*.json
+cd dashboard && npm ci && npm run build   # outputs dashboard/out
 ```
-operating-system-for-democracy/
-├── docs/           Philosophy, methodology, data dictionary
-├── schemas/        JSON schemas (country, policy, indicator, source)
-├── src/osd/        Core engines (scoring, uncertainty, ingestion)
-├── api/            FastAPI REST API
-├── dashboard/      Next.js frontend
-├── data/           Raw, staging, processed, country seeds
-├── tests/          Pytest suite
-└── results/        Rankings and methodology outputs
-```
 
-## Data integrity
+Optional API/Postgres stack remains for research workflows — not required to browse rankings.
 
-- **No fabricated data.** Unavailable values are explicit (`null` with reason).
-- **AI classifications** are marked `unverified` until source evidence or human review.
-- **Provenance required** for every displayed score.
+## Scoring
+
+1. Normalise indicators 0–100
+2. Domain scores = Maqasid objectives
+3. Overall OSD = weighted geometric mean
+4. Confidence intervals + red-line caps
+5. Every score carries provenance
+6. **Every expenditure must declare Maqasid mapping**
 
 ## Licence
 
@@ -151,4 +111,4 @@ MIT — see [LICENSE](LICENSE).
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md). Philosophy: [docs/philosophy/maqasid.md](docs/philosophy/maqasid.md), [docs/philosophy/urf.md](docs/philosophy/urf.md).

@@ -70,6 +70,18 @@ def init_db():
     click.echo("Database tables created.")
 
 
+@cli.command("export-static")
+@click.option("--out", "out_dir", default=None, help="Output directory for static JSON")
+def export_static_cmd(out_dir: str | None):
+    """Export rankings and country data for GitHub Pages (no local server needed)."""
+    from pathlib import Path
+
+    from osd.export.static_site import export_static
+
+    target = export_static(Path(out_dir) if out_dir else None)
+    click.echo(f"Static site data written to {target}")
+
+
 @cli.command()
 def seed():
     """Seed pilot data, compute scores, export rankings."""
@@ -182,7 +194,9 @@ def _seed_policies(db):
             legal_basis=p.get("legal_basis"),
             constitutional_constraints=p.get("constitutional_constraints"),
             maqasid_domains=p.get("maqasid_domains"),
-            halakha_parallels=p.get("halakha_parallels"),
+            halakha_parallels=[
+                u.get("principle") for u in (p.get("urf") or []) if u.get("tradition") == "halakha"
+            ] or p.get("halakha_parallels"),
             public_value_domains=p.get("public_value_domains"),
             stated_objectives=p.get("stated_objectives"),
             target_population=p.get("target_population"),

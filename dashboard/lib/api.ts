@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8742";
+/** Static data client for GitHub Pages — no local API required. */
 
 export interface RankingEntry {
   rank: number;
@@ -17,11 +17,13 @@ export interface RankingsResponse {
   weight_profile: string;
   computed_at: string | null;
   total_countries: number;
+  framework?: string;
 }
 
 export interface DomainScore {
   domain_id: string;
   domain_name: string | null;
+  maqasid?: string;
   score: number | null;
   ci_lower: number | null;
   ci_upper: number | null;
@@ -45,6 +47,8 @@ export interface CountryScore {
   red_line_events: Record<string, unknown>[];
   provenance: Record<string, unknown> | null;
   model_version: string;
+  framework?: string;
+  urf_note?: string;
 }
 
 export interface Policy {
@@ -58,6 +62,7 @@ export interface Policy {
   stated_objectives: string[];
   public_value_domains: string[];
   maqasid_domains: string[];
+  urf?: { tradition: string; principle: string; layer: string }[];
   budget: Record<string, unknown> | null;
   baseline: Record<string, unknown> | null;
   targets: Record<string, unknown> | null;
@@ -66,21 +71,47 @@ export interface Policy {
   ai_generated: boolean;
   score_components: Record<string, number | null> | null;
   effectiveness_score: number | null;
-  sources: { source_id: string; name: string; url: string | null }[];
+  sources: { source_id: string; name: string; url: string | null }[] | string[];
   provenance: Record<string, unknown> | null;
+  framework?: string;
 }
 
-async function fetchApi<T>(path: string): Promise<T> {
-  const res = await fetch(`${API_URL}${path}`, { next: { revalidate: 60 } });
-  if (!res.ok) throw new Error(`API error: ${res.status}`);
-  return res.json();
+function dataUrl(path: string): string {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  return `${base}/data/${path}`;
+}
+
+async function loadJson<T>(file: string): Promise<T> {
+  // Prefer relative fetch for static export; fallback for SSR build.
+  if (typeof window === "undefined") {
+    const { readFile } = await import("fs/promises");
+    const { join } = await import("path");
+    const p = join(process.cwd(), "public", "data", file);
+    return JSON.parse(await readFile(p, "utf-8")) as T;
+  }
+  const res = await fetch(dataUrl(file));
+  if (!res.ok) throw new Error(`Failed to load ${file}`);
+  return res.json() as Promise<T>;
 }
 
 export const api = {
-  rankings: () => fetchApi<RankingsResponse>("/api/v1/rankings"),
-  countryScore: (iso3: string) => fetchApi<CountryScore>(`/api/v1/countries/${iso3}/score`),
-  policies: (country?: string) =>
-    fetchApi<Policy[]>(`/api/v1/policies${country ? `?country=${country}` : ""}`),
-  policy: (id: string) => fetchApi<Policy>(`/api/v1/policies/${id}`),
-  domains: () => fetchApi<{ id: string; name: string; sort_order: number }[]>("/api/v1/domains"),
+  rankings: () => loadJson<RankingsResponse>("rankings.json"),
+  countryScore: async (iso3: string) => {
+    const all = await loadJson<Record<string, CountryScore>>("country_scores.json");
+    const score = all[iso3.toUpperCase()];
+    if (!score) throw new Error("Country not found");
+    return score;
+  },
+  policies: async (country?: string) => {
+    const all = await loadJson<Policy[]>("policies.json");
+    if (!country) return all;
+    return all.filter((p) => p.country_iso3 === country.toUpperCase() || p.country_iso3 === country);
+  },
+  policy: async (id: string) => {
+    const all = await loadJson<Policy[]>("policies.json");
+    const p = all.find((x) => x.policy_id === id);
+    if (!p) throw new Error("Policy not found");
+    return p;
+  },
+  meta: () => loadJson<Record<string, unknown>>("meta.json"),
 };

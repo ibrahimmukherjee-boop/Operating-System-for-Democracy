@@ -1,15 +1,24 @@
-# Liberal Constitutionalism — Comparative Provenance
+# Liberal Constitutional Practice as ʿUrf
 
-Liberal constitutional traditions emphasise:
+Liberal constitutional traditions are treated as **ʿurf** (local custom), not as a co-equal global scoring system.
 
-- Individual rights against state power
-- Separation of powers and judicial review
-- Rule of law and due process
-- Free expression and association
-- Periodic elections and political competition
+They may be tuned per country — rights catalogues, separation of powers, electoral design — **only where they serve Maqasid and do not contradict them**.
 
-These map primarily to domains D1, D6, D7, and D8, but constitutional orders differ substantially. OSD records `constitution_url` and `constitutional_constraints` per country without assuming identical implementation.
+## Typical urf → Maqasid mappings
 
-## Convergence without equivalence
+| Constitutional custom | Maqasid |
+|-----------------------|---------|
+| Freedom of religion / conscience | hifz_al_din |
+| Right to life / bodily integrity | hifz_al_nafs |
+| Free expression / education | hifz_al_aql |
+| Family protections | hifz_al_nasl |
+| Property / due process over taking | hifz_al_mal |
+| Judicial independence / equality before law | adl |
+| Dignity / non-degrading treatment | karamah |
+| Elections / consultation | shura |
+| Anti-corruption / public trust | amanah |
+| Environmental duties | la_darar |
 
-Constitutional rights language may overlap with Maqāṣid or human-rights frameworks in substance while differing in foundation, scope, and enforcement. OSD tracks convergence in policy mapping without collapsing traditions.
+## Rule
+
+Constitutional text does not override Maqasid red lines. Where local constitutional practice conflicts with Maqasid, the Maqasid constraint wins for OSD scoring.

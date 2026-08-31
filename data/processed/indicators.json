@@ -1,0 +1,137 @@
+[
+  {
+    "indicator_id": "D1_freedom_religion_index",
+    "name": "Freedom of religion index",
+    "domain_id": "D1",
+    "direction": "higher_better",
+    "unit": "index",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.85
+  },
+  {
+    "indicator_id": "D2_homicide_rate",
+    "name": "Intentional homicide rate",
+    "domain_id": "D2",
+    "direction": "lower_better",
+    "unit": "per 100k",
+    "normalisation_method": "percentile",
+    "source_reliability_default": 0.9
+  },
+  {
+    "indicator_id": "D2_life_expectancy",
+    "name": "Life expectancy at birth",
+    "domain_id": "D2",
+    "direction": "higher_better",
+    "unit": "years",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.95
+  },
+  {
+    "indicator_id": "D3_literacy_rate",
+    "name": "Adult literacy rate",
+    "domain_id": "D3",
+    "direction": "higher_better",
+    "unit": "percent",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.85
+  },
+  {
+    "indicator_id": "D3_education_index",
+    "name": "Education index (UNDP)",
+    "domain_id": "D3",
+    "direction": "higher_better",
+    "unit": "index",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.9
+  },
+  {
+    "indicator_id": "D4_child_mortality",
+    "name": "Under-5 mortality rate",
+    "domain_id": "D4",
+    "direction": "lower_better",
+    "unit": "per 1000 live births",
+    "normalisation_method": "percentile",
+    "source_reliability_default": 0.92
+  },
+  {
+    "indicator_id": "D5_gini_index",
+    "name": "Gini coefficient (income inequality)",
+    "domain_id": "D5",
+    "direction": "lower_better",
+    "unit": "index",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.88
+  },
+  {
+    "indicator_id": "D5_gdp_per_capita_ppp",
+    "name": "GDP per capita (PPP)",
+    "domain_id": "D5",
+    "direction": "higher_better",
+    "unit": "current international $",
+    "normalisation_method": "percentile",
+    "source_reliability_default": 0.9
+  },
+  {
+    "indicator_id": "D6_rule_of_law",
+    "name": "Rule of law index (WJP)",
+    "domain_id": "D6",
+    "direction": "higher_better",
+    "unit": "score",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.88
+  },
+  {
+    "indicator_id": "D6_vdem_liberal_democracy",
+    "name": "V-Dem liberal democracy index",
+    "domain_id": "D6",
+    "direction": "higher_better",
+    "unit": "index",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.9
+  },
+  {
+    "indicator_id": "D7_human_freedom_index",
+    "name": "Human Freedom Index (personal freedom)",
+    "domain_id": "D7",
+    "direction": "higher_better",
+    "unit": "score",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.85
+  },
+  {
+    "indicator_id": "D8_electoral_democracy",
+    "name": "Electoral democracy index (V-Dem)",
+    "domain_id": "D8",
+    "direction": "higher_better",
+    "unit": "index",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.9
+  },
+  {
+    "indicator_id": "D9_corruption_perception",
+    "name": "Corruption Perceptions Index",
+    "domain_id": "D9",
+    "direction": "higher_better",
+    "unit": "score",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.85
+  },
+  {
+    "indicator_id": "D10_co2_per_capita",
+    "name": "CO2 emissions per capita",
+    "domain_id": "D10",
+    "direction": "lower_better",
+    "unit": "metric tons",
+    "normalisation_method": "percentile",
+    "source_reliability_default": 0.92
+  },
+  {
+    "indicator_id": "D10_renewable_energy_share",
+    "name": "Renewable energy consumption share",
+    "domain_id": "D10",
+    "direction": "higher_better",
+    "unit": "percent of total",
+    "normalisation_method": "min_max",
+    "source_reliability_default": 0.88
+  }
+]
